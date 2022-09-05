@@ -1,0 +1,27 @@
+@font-face {
+    font-family: SmbWeb;
+    src: url(../font/smasfont.ttf) format("truetype")
+}
+
+body {
+    background-color: #131313;
+    font-family: SmbWeb;
+    color: white;
+}
+
+p {
+    text-align: center;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+.image {
+    max-width: 100%;
+    user-select: none;
+}
