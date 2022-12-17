@@ -146,7 +146,7 @@ App.prototype.keyEvent = function(evt, state) {
 };
 
 App.prototype.updatePad = function() {
-  if(navigator) { pads = navigator.getGamepads(); }
+  if(navigator.getGamepads) { pads = navigator.getGamepads(); }
   else { pads = []; }
   
   var pick = 0;

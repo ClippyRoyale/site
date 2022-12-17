@@ -1877,7 +1877,7 @@ function genStartPad(target) {
     var buttonAPressed = false;
     var startPadLoop = function () {
         var gamepad;
-        navigator && (gamepad = navigator.getGamepads()[0x0]);
+        navigator.getGamepads && (gamepad = navigator.getGamepads()[0x0]);
         gamepad && !gamepad.buttons[buttonA].pressed && buttonAPressed && target.launch();
         gamepad && (buttonAPressed = gamepad.buttons[buttonA].pressed);
         target.padLoop = setTimeout(startPadLoop, 0x21);
@@ -7724,7 +7724,7 @@ Input.prototype.pad = {};
 Input.prototype.pad.pad = undefined;
 Input.prototype.pad.ax = vec2.make(0x0, 0x0);
 Input.prototype.pad.update = function () {
-    this.pad = navigator ? navigator.getGamepads()[0x0] : undefined;
+    this.pad = navigator.getGamepads ? navigator.getGamepads()[0x0] : undefined;
     this.analog();
 };
 Input.prototype.pad.analog = function () {
