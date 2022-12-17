@@ -10199,7 +10199,7 @@ App.prototype.init = function () {
         check ? this.menu.disclaim.show() : this.menu.disclaim.show();
     }
     var that = this;
-    /*setTimeout(function () {
+    setTimeout(function () {
         that.menu.load.show();
 
         if (that.goToLobby && that.session === undefined) {
@@ -10214,7 +10214,7 @@ App.prototype.init = function () {
         }
 
         that.menu.main.show();
-    }, this.goToLobby || this.inviteCode !== null ? 100 : DISCLAIMER_SCREEN_TIMEOUT);*/
+    }, this.goToLobby || this.inviteCode !== null ? 100 : DISCLAIMER_SCREEN_TIMEOUT);
 };
 App.prototype.load = function (data) {
     app.menu.name.setAutoMove(app.autoMove);
