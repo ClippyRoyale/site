@@ -1,0 +1,97 @@
+@font-face {
+  font-family: SmbWeb;
+  src: url("../font/smbfont.ttf") format("truetype")
+}
+
+@-webkit-keyframes bkgScroll {
+  0% {
+    background-position: 0px 0px
+  }
+  100% {
+    background-position: 100% 0px
+  }
+}
+@keyframes bkgScroll {
+  0% {
+    background-position: 0px 0px
+  }
+  100% {
+    background-position: 100% 0px
+  }
+}
+
+#body {
+  -webkit-animation: bkgScroll 150s linear infinite;
+  animation: bkgScroll 150s linear infinite;
+  background-attachment: fixed;
+  background-color: #6B8CFF;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/bkga.png);
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  color: #FFF;
+  font-family: SmbWeb;
+  font-size: 10px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  line-height: 1.4
+}
+
+a {
+  color: #FFF
+}
+
+#container {
+  background-color: #994E00;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV8/pCIVETtIEclQnSyIioiTVLEIFkpboVUHk0u/oElDkuLiKLgWHPxYrDq4OOvq4CoIgh8gjk5Oii5S4v+SQosYD4778e7e4+4d4G1UmGL4xwFFNfVUPCZkc6tC4BV+DKMfYcyKzNAS6cUMXMfXPTx8vYvyLPdzf45eOW8wwCMQzzFNN4k3iKc3TY3zPnGIlUSZ+Jx4TKcLEj9yXXL4jXPRZi/PDOmZ1DxxiFgodrDUwaykK8RTxBFZUSnfm3VY5rzFWanUWOue/IXBvLqS5jrNIcSxhASSECChhjIqMBGlVSXFQIr2Yy7+sO1PkksiVxmMHAuoQoFo+8H/4He3RmFywkkKxoCuF8v6GAECu0Czblnfx5bVPAF8z8CV2vZXG8DMJ+n1thY5Avq2gYvrtibtAZc7wOCTJuqiLfloegsF4P2MvikHDNwCPWtOb619nD4AGepq+QY4OARGi5S97vLu7s7e/j3T6u8H4HVy047HNnMAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBB4TKibqiYCvAAAAJ0lEQVQ4y2NgwA/+E5JnYqAQUGwAIxHOJAn8J1V+GIbBaDoYmekAADEeDAm6TpGEAAAAAElFTkSuQmCC");
+  background-size: 48px 48px;
+  border: 8px solid #000;
+  max-width: 650px;
+  padding: 10px
+}
+
+.container{
+  display: inline-block;
+  width: 300px
+}
+
+.t {
+  font-size: 20px
+}
+
+.a {
+  background-color: #EA9E22;
+  border-top: 6px solid #994E00;
+  border-right: 6px solid #000;
+  border-bottom: 6px solid #000;
+  border-left: 6px solid #994E00;
+  margin: 5px;
+  padding: 5px;
+  width: fit-content
+}
+
+.n {
+  color: #663500;
+  display: inline-block;
+  font-weight: bold;
+  width: 73px
+}
+
+.d {
+  font-weight: bold
+}
+
+.i {
+  font-weight: normal
+}
+
+.s {
+  border-bottom: dashed 2px #000;
+  margin-top: 8px;
+  margin-bottom: 8px
+}
+
+.v {
+  font-style: italic;
+  margin-left: 8px
+}

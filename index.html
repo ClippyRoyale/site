@@ -1,14 +1,467 @@
-<html>
-    <head>
-        <title>Mario Royale</title>
-        <link rel='stylesheet' href='css/home.css'>
-        <link rel='icon' href='img/icon.png'>
-    </head>
+<html lang="en-US">
 
-    <body>
-        <div class="main">
-            <img class="image" src="img/title.png">
-            <p>For progress reports, please join our Discord server by <a href="https://discord.gg/pNQJhKSkCd">clicking here</a>!</p>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCY9L8C0PD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-FCY9L8C0PD');
+  </script>
+
+  <title>Mario Royale</title>
+  <meta name="og:title" content="Mario Royale" />
+  <meta property="og:title" content="Mario Royale" />
+  <meta name="twitter:title" content="Mario Royale" />
+
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" id="meta-zoom"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="keywords"
+    content="MRoyale, Mario, Mario Royale, Royale, Super Mario, Super Mario Bros., Super Mario Bros. Royale, Super Mario Royale" />
+  <meta name="description"
+    content="Mario Royale is a competitive online battle where up to 99 players compete for glory!" />
+  <meta name="og:description"
+    content="Mario Royale is a competitive online battle where up to 99 players compete for glory!" />
+  <meta property="og:description"
+    content="Mario Royale is a competitive online battle where up to 99 players compete for glory!" />
+  <meta name="twitter:description"
+    content="Mario Royale is a competitive online battle where up to 99 players compete for glory!" />
+
+  <link rel='icon' href='https://raw.githubusercontent.com/mroyale/assets/master/img/home/icon.ico'>
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/mroyale/assets/master/img/home/icon.ico" />
+  <link rel="apple-touch-icon" sizes="192x192"
+    href="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <meta name="og:image"
+    content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta name="theme-color" content="#FFA441" />
+  <meta name="msapplication-navbutton-color" content="#FFA441">
+  <meta name="twitter:widgets:link-color" content="#FFA441">
+  <meta name="twitter:widgets:border-color" content="#FFA441">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="HandheldFriendly" content="true">
+
+  <link rel="canonical" href="https://marioroyale.nightc.at/" />
+  <meta name="og:url" content="https://marioroyale.nightc.at/" />
+  <meta property="og:url" content="https://marioroyale.nightc.at/" />
+
+  <meta name="og:site_name" content="Mario Royale" />
+  <meta property="og:site_name" content="Mario Royale" />
+
+  <meta name="og:type" content="website" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@MRoyalePlus" />
+
+  <link rel='stylesheet' type='text/css' href='css/index.css?v=4.4.6'>
+
+  <script>
+    /* Prevent phones from zooming screen. The webapp handles this. */
+    document.addEventListener('touchmove', function (event) {
+      event = event.originalEvent || event;
+      if (event.scale !== undefined) { event.preventDefault(); }
+    }, false);
+  </script>
+
+  <div id="log" class='container-center'>
+    <p class="debugLog">Loading Resources...</p>
+  </div>
+</head>
+
+<body id="body" ondragstart="return false;" ondrop="return false;">
+  <!-- Warning -->
+  <div id='warn' class='warn' style="display:none;"></div>
+
+  <!-- Error -->
+  <div id='error' class='container-center'>
+    <div id='error-message' class='error'></div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div id='disclaim' class='container-center'>
+    <img src="https://cdn.discordapp.com/attachments/1000843578806898790/1013740884602388530/unknown.png" style="max-width: 100%;">
+    <div class='dis-sm'>For progress reports, please join our Discord server by <span onclick="window.open('https://discord.gg/pNQJhKSkCd')" style="text-decoration:underline;">clicking here</span>, we'll continually post progress updates!</div>
+  </div>
+
+  <!-- Mobile Disclaimer -->
+  <div id='disclaim-mobile' class='container-center'>
+    <div class='dis-lg'>Disclaimer</div>
+    <div class='dis-sm'>Mario Royale is intented to be played on desktop devices.</div>
+    <div class='dis-sm'>The game may be displayed incorrectly on smartphone devices. Use horizontal mode for a better experience.</div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id='load' class='container-center'>
+    <div id='loader'></div>
+  </div>
+
+  <!-- Main Menu -->
+  <div id='main' class='container-center'>
+    <div class='title' id="main-title">Mario Royale</div>
+    <div class='container-launch' style='margin-bottom: 20px'>
+      <span id='main-launch' class='launch'>Play Now!</span>
+      <span class='players' id='main-numberFull'><span id='main-number' class='player-number'
+          style="display:none;">##</span> Online</span>
+      <span class='player-maintenance' id='main-maintenance' style="display:none;">Maintenance</span>
+    </div>
+    <div class="container-launch">
+      <span class='launch' onclick="window.open('./control.html');">Controls</span>
+    </div>
+    <div class="container-launch">
+      <span id='main-login' class='launch'>Login</span>
+    </div>
+    <div class="container-launch">
+      <span id='main-register' class='launch'>Register</span>
+    </div>
+  </div>
+
+  <!-- Main Menu (logged in) -->
+  <div id='mainAsMember' class='container-center' style='display: none;'>
+    <div class='title' id="mainAsMember-title">Mario Royale</div>
+    <div class='container-launch'>
+      <span class='players' id='mainAsMember-numberFull'><span id='mainAsMember-number' class='player-number'>##</span>
+        Online</span>
+      <span class='player-maintenance' id='mainAsMember-maintenance' style="display:none;">Maintenance</span>
+      <div style='display:inline-block'>
+        <span id='mainAsMember-launch' class='launch'>Play Now!</span>
+        <div id='mainAsMember-gm-change' class="gm-change tooltip" style='margin-left: 10px'>
+          <span class="tooltiptext">Change the current gamemode</span>
         </div>
-    </body>
+        <div id='mainAsMember-char-music-toggle' class='char-music-toggle tooltip' style='margin-left: 10px'>
+          <span class="tooltiptext">Toggle character-unique music</span>
+        </div>
+        <div id='mainAsMember-private-toggle' class='private-toggle tooltip' style='margin-left: 10px'>
+          <span class="tooltiptext">Toggle private room</span>
+        </div>
+      </div>
+    </div>
+    <div class="container-launch">
+      <span id='mainAsMember-profile' class='launch'>Profile</span>
+    </div>
+    <div class="container-launch">
+      <span id='profile-shop' class='launch'>Skin Shop</span></span>
+    </div>
+    <div class="container-launch">
+      <span class='launch' onclick="window.open('./control.html');">Controls</span>
+    </div>
+    <div class="container-launch">
+      <span id='mainAsMember-logout' class='launch'>Logout</span>
+    </div>
+  </div>
+
+  <!-- Player profile -->
+  <div id='profile' class='container-center' style='display: none;'>
+    <div class='name'><input id='profile-nickname' type='text' class='name-input' placeholder='Nickname' /></div>
+    <div class='team'><input id='profile-team' type='text' class='team-input' maxlength="3" placeholder='Squad Code' />
+    </div>
+    <div class="container-launch">
+      <center><span id='mainAsMember-pwd' class='launch'>Change Password</span></center>
+    </div>
+    <div id='profile-skin-select' class="skin-select">
+    </div>
+    <div class='container-bottom' style='margin-top:90px'>
+      <div class='container-go'>
+        <span id='profile-save' class='launch'>Save</span> | <span id='profile-back' class='launch'>Cancel</span>
+      </div>
+    </div>
+    <div id="profileSaveResult" class="login-result">&nbsp;</div>
+  </div>
+
+  <!-- Password change -->
+  <div id='pwd' class='container-center' style='display: none;'>
+    <div class='name'><input id='pwd-password-input' type='password' class='password-input'
+        placeholder='New password' /></div>
+    <div class='name'><input id='pwd-password2-input' type='password' class='password-input'
+        placeholder='Verify Password' /></div>
+    <div class='container-bottom'>
+      <div class='container-go'>
+        <span id='pwd-save' class='launch'>Save</span>
+        |
+        <span id='pwd-back' class='launch'>Cancel</span>
+      </div>
+    </div>
+    <div id="pwdResult" class="login-result">&nbsp;</div>
+  </div>
+
+  <!-- Skin shop -->
+  <div id='shop' class='container-center' style='display: none;'>
+    <div style='text-align: center; font-size: 48px;'>Skin Shop</div>
+    <hr>
+    <div id='shop-select' class='skin-select'></div>
+    <audio id="successSound">
+      <source src="https://raw.githubusercontent.com/mroyale/assets/master/audio/shop/success.mp3" type="audio/mp3">
+    </audio>
+    <audio id="failSound">
+      <source src="https://raw.githubusercontent.com/mroyale/assets/master/audio/shop/fail.mp3" type="audio/mp3">
+    </audio>
+    <br>
+    <div style='text-align:center;font-size:24px;'>
+      Name: <span id='shop-name'></span> | Cost: <span id='shop-price'>None</span></div><br>
+    <div class='container-bottom'>
+      <div class='container-go'>
+        <span id='shop-buy' class='launch'>Buy</span>
+        |
+        <span id='shop-return' class='launch'>Return</span>
+      </div>
+    </div>
+    <div id='shopResult' class="login-result">&nbsp;</div>
+  </div>
+
+  <!-- Guest mode -->
+  <div id='name' class='container-center' style='display: none;'>
+    <div class='name'><input id='name-input' type='text' class='name-input' placeholder='Name' maxlength="20" /></div>
+    <div class='team'><input id='team-input' type='text' class='team-input' maxlength="3" placeholder='Squad Code' />
+    </div>
+    <div class='container-bottom'>
+      <div class='container-go'>
+        <div style='display:inline-block'>
+          <span id='name-launch' class='launch'>Go!</span>
+          <div id='name-gm-change' class="gm-change tooltip" style='margin-left: 10px'>
+            <span class="tooltiptext">Change the current game mode</span>
+          </div>
+          <div id='char-music-toggle' class="char-music-toggle tooltip" style='margin-left: 10px'>
+            <span class="tooltiptext">Toggle character-unique music</span>
+          </div>
+          <div id='name-private-toggle' class='private-toggle tooltip' style='margin-left: 10px'>
+            <span class="tooltiptext">Toggle private room</span>
+          </div>
+        </div>
+        |
+        <span id='name-back' class='launch'>Cancel</span>
+      </div>
+    </div>
+    <div id='skin-select' class="skin-select">
+    </div>
+  </div>
+
+  <!-- Login -->
+  <div id='login' class='container-center' style='display: none;'>
+    <form id='login-form' action="#login">
+      <div class='name'><input id='login-username-input' type='text' class='password-input' placeholder='UserName'
+          maxlength="20" /></div>
+      <div class='name'><input id='login-password-input' type='password' class='password-input'
+          placeholder='Password' /></div>
+      <div class='container-bottom'>
+        <div class="container-launch">
+          <input id='login-do' type="submit" class='launchStrong' value="Login" />
+          |
+          <span id='login-back' class='launch'>Cancel</span>
+        </div>
+      </div>
+      <div id="loginResult" class="login-result">&nbsp;</div>
+    </form>
+  </div>
+
+  <!-- Register -->
+  <div id='register' class='container-center' style='display: none;'>
+    <form id='register-form' action="#register">
+      <div class='name'><input id='register-username-input' type='text' class='password-input' placeholder='UserName'
+          maxlength='20' /></div>
+      <div class='name'><input id='register-password-input' type='password' class='password-input'
+          placeholder='Password' /></div>
+      <div class='name'><input id='register-password2-input' type='password' class='password-input'
+          placeholder='Password again' /></div>
+      <div class='name'>
+        <img id='register-captcha' alt='Captcha' />
+        <input id='register-captcha-input' type='text' class='captcha-input' placeholder='Captcha' maxlength='5'
+          autocomplete="off" />
+      </div>
+      <div class='container-bottom'>
+        <div class="container-launch">
+          <input id='register-do' type="submit" class='launchStrong' value="Register" />
+          |
+          <span id='register-back' class='launch'>Cancel</span>
+        </div>
+      </div>
+      <div id="registerResult" class="login-result">&nbsp;</div>
+    </form>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id='leaderboard' class='container-privLobby' style='display: none;margin-top:25px;z-index:1'>
+    <div class='dis-sm-r' onclick="hideLeaderBoard()">x</div>
+    <div class='dis-lg' style='margin-bottom:6px;'>Leaderboards</div>
+    <hr style="width:95%">
+
+    <div style='text-align:center'>&nbsp;
+      Select:
+      <div class='leaderboard-select' onclick="setLeaderBoard('coins')" id="coins"
+        style="border: 2px solid white; cursor:default;">coins</div>
+      <div class='leaderboard-select' onclick="setLeaderBoard('wins')" id="wins">wins</div>
+      <div class='leaderboard-select' onclick="setLeaderBoard('kills')" id="kills">kills</div>
+      &nbsp;
+    </div>
+
+    <div id="leaderboard-content-coins" class="leaderboard-content"><span style='text-align:center;'
+        class="loading">Loading content...</span></div>
+    <div id="leaderboard-content-wins" style="display:none;" class="leaderboard-content"><span
+        style='text-align:center;' class="loading">Loading content...</span></div>
+    <div id="leaderboard-content-kills" style="display:none;" class="leaderboard-content"><span
+        style='text-align:center;' class="loading">Loading content...</span></div>
+    <div style='text-align:center;'>
+      Auto-refresh:
+      <div class='leaderboard-select' onclick="enableRefresh()" id="enableRefresh">On</div>
+      <div class='leaderboard-select' onclick="disableRefresh()" id="disableRefresh">Off</div>
+    </div>
+  </div>
+
+  <!-- Game -->
+  <div id='game' class='fullscreen' oncontextmenu="return false">
+    <canvas id="game-canvas" width="320" height="240">
+      Your browser doesn't appear to support the <code>&lt;canvas&gt;</code> element.
+    </canvas>
+  </div>
+
+  <!-- Private match settings -->
+  <div id='privLobby' class='container-privLobby' style='display: none;'>
+    <div class='dis-sm-r' id="privLobbyClose">x</div>
+    <div class='dis-lg'>World Select</div>
+    <div id="levelSelectStandard" class="levelSelectRow"
+      style='font-size:14px;color:#663500;background-color: #EA9E22;border-top: 6px solid #994E00;border-right: 6px solid #000;border-bottom: 6px solid #000;border-left: 6px solid #994E00;'>
+    </div>
+    <div class="levelSelectRow">
+      <div id="levelSelectCustom" class='levelSelectButton'>Custom</div>
+      <input type="file" id="levelSelectInput" name="levelSelectInput[]" accept=".json,.txt" />
+    </div>
+    <div id="levelSelectCustomResult" class="levelSelectRow">&nbsp;</div>
+  </div>
+  <!-- Options menu -->
+  <div id='settingsPanel' class='container-privLobby' style='display: none; padding: 2px;'>
+    <div class='dis-sm-r' id="settingsClose" onclick="document.getElementById('settingsPanel').style.display = 'none';">
+      x</div>
+    <div class='dis-lg'>Settings</div>
+    <div class="levelSelectRow">
+      <span id='settings-return-main' onclick='location.reload();'>Return to Main</span>
+    </div>
+    <div class="levelSelectRow">
+      <span id="settins-return-lobby" onclick='Cookies.set("go_to_lobby", "1");location.reload();'">Return to Lobby</span>
+            </div>
+            <div class=" levelSelectRow">
+        <span id='settings-show-privLobby' display="none">Private Lobby Options</span>
+    </div>
+    <div class="levelSelectRow">
+      <div id="autoMove" class='levelSelectButton' style="border:none;">[ ] Auto Move</div>
+    </div>
+    <div class="levelSelectRow">
+      <div id="compactMode" class='levelSelectButton' style="border:none;">[ ] Compact Mode</div>
+    </div>
+    <div class="levelSelectRow">
+      <div id="accessibilityMode" class='levelSelectButton' style="border:none;"
+        alt="Replaces textures that could be eye sensitive to not be that.">[ ] Accessibility Mode</div>
+    </div>
+    <div
+      style="font-size:14px;color:#663500;background-color: #EA9E22;border-top: 6px solid #994E00;border-right: 6px solid #000;border-bottom: 6px solid #000;border-left: 6px solid #994E00;">
+      <div class='dis' style='padding:2px'>GFX Mods</div>
+      <div class="levelSelectRow">
+        <div id="gfxTestSkin" class='levelSelectButton'>Skin</div>
+        <input type="file" id="gfxTestSkinInput" name="gfxTestSkinInput" accept=".png" />
+        <div id="gfxTestSkinRemove" class='levelSelectButton'>Remove</div>
+      </div>
+      <div class="levelSelectRow">
+        <div id="gfxTestMap" class='levelSelectButton'>Map</div>
+        <input type="file" id="gfxTestMapInput" name="gfxTestMapInput" accept=".png" />
+        <div id="gfxTestMapRemove" class='levelSelectButton'>Remove</div>
+      </div>
+      <div class="levelSelectRow">
+        <div id="gfxTestObj" class='levelSelectButton'>Obj</div>
+        <input type="file" id="gfxTestObjInput" name="gfxTestObjInput" accept=".png" />
+        <div id="gfxTestObjRemove" class='levelSelectButton'>Remove</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Chat -->
+  <div id="hiddenChat" style='display:none;'>
+    <pre class="container-gameChat" style="width: 14rem; height: 5vh; transform: translateX(10%) translateY(90vh);">
+    <h2 style="font-size: 130%; margin-left: 7%; margin-top: 1px;">Show Chat</h2></pre>
+  </div>
+
+  <!-- Game Chat -->
+  <div id='gameChat' style='display:none;'>
+    <pre class="container-gameChat"><h2 style="text-align: center; margin-block-end: 0;">Chat</h2>
+    <span class="container-hideChat" id="hideChat">X</span>
+    <span class="container-chatTab"> <div id="lobbyBtn" style="border: 2px solid white;">Lobby</div>&nbsp; <div id="squadBtn">Squad</div> </span>
+    <hr style="width:95%; margin-top:-2%;">
+    <input class="container-chatInput" id="chat-input" maxlength="100">
+    <pre id="messagesGlobal" class="container-chatMessages"></pre>
+    <pre id="messagesSquad" class="container-chatMessages" style="display:none; margin-top: -13.5%"></pre>
+    </pre>
+  </div>
+
+  <!-- Dev Console -->
+  <div id='devConsole' class='container-devConsole' style='display: none;'>
+    <div class='leaderboard-select' id="devConsole-showHide">DEV&gt;</div>
+    <div id="devConsole-main" style="display: none;">
+      <div class='leaderboard-select' id="devConsole-kick">kick</div>
+      <div class='leaderboard-select' id="devConsole-ban">ban</div>
+      <div class='leaderboard-select' id="devConsole-rename">rename</div> | <div class='leaderboard-select'
+        id="devConsole-forceStart">Force Start</div>
+      <div class="name" id="devConsole-renameForm" style="display: none;">
+        <input id="devConsole-renameField" type="text" class="devConsole-name-input" placeholder="new name"
+          autocomplete="off" data-lpignore="true" />
+        <div class='leaderboard-select' id="devConsole-renameDone">ok</div><br>
+        <input id="devConsole-resquadField" type="text" class="devConsole-name-input" placeholder="new sqd"
+          autocomplete="off" data-lpignore="true" />
+        <div class='leaderboard-select' id="devConsole-resquadDone">ok</div>
+      </div>
+      <span id="devConsole-playerList"></span>
+    </div>
+  </div>
+
+  <!--Stats bar at the bottom of the screen-->
+  <div id='statsBar' class="container-statsBar">
+    <div id='win' class="win" style="display:none;"></div>
+  </div>
+  <!-- Links -->
+  <div id='link' style='display:none;'>
+    <div class="link-r">
+      <div class="link-git" onclick="window.open('https://github.com/mroyale/mroyale-client')"></div>
+      <div class="link-disc" onclick="window.open('https://discord.gg/kV72ezsQwt')"></div>
+    </div>
+    <div class="link-l">
+      <div class="rtfpn2"></div>
+      <div id="link-patch" class="link-patch" onclick="window.open('/patch.html?v=4.4.6')" style="display:none;">v4.4.6
+        Patch Notes</div>
+    </div>
+    <div class="link-b">
+      <div class="rtfpn"></div>
+      <div>
+        <div class="link-leaderboard" onclick="showLeaderBoard();toggleRefresh();">Leaderboards</div>
+        <div class="link-editor" onclick="window.open('/editor.html?v=4.4.6')"></div>
+        <!-- <div class="link-con" onclick="window.open('/control.html?v=4.4.6')"></div> -->
+      </div>
+    </div>
+    <div class="link-s">
+    </div>
+  </div>
+
+  <div id='return' class='container-return' style='display: none;'>
+    <span id='return-main' class='launch' onclick='location.reload();'>Return to Main</span><br>
+    <span id='return-lobby' class='launch' onclick='Cookies.set("go_to_lobby", "1");location.reload();'>Return to
+      Lobby</span>
+  </div>
+
+  <!-- Libs -->
+  <script src='js/lib/jquery/jquery-3.6.0.min.js'></script>
+  <script src='js/lib/cookie/js.cookie.min.js'></script>
+
+  <!-- Core -->
+  <script src='js/core.js?v=4.4.6'></script>
+</body>
+
 </html>

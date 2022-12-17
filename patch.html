@@ -1,0 +1,1394 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Patch Notes</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+
+  <meta name="og:site_name" content="Mario Royale" />
+  <meta property="og:site_name" content="Mario Royale" />
+
+  <meta name="description" content="Mario Royale Patch Notes" />
+  <meta name="og:description" content="Mario Royale Patch Notes" />
+  <meta property="og:description" content="Mario Royale Patch Notes" />
+  <meta name="twitter:description" content="Mario Royale Patch Notes" />
+
+  <link rel='icon' href='https://raw.githubusercontent.com/mroyale/assets/master/img/home/icon.ico'>
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/mroyale/assets/master/img/home/icon.ico" />
+  <link rel="apple-touch-icon" sizes="192x192"
+    href="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <meta name="og:image"
+    content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+  <link rel="stylesheet" type="text/css" href="css/patch.css">
+</head>
+
+<body>
+  <div class='chng'>
+
+    <body>
+      <div class="chng">
+        <h1>Version 4.4.6</h1>
+        2022-08-02 - Happy New Month!<br>
+        Added an in-game chat
+        <div class="note">
+          Here you can switch between two modes: Lobby and Squad<br>
+          In the Lobby mode, you can chat with everyone in the same match as you<br>
+          In the Squad mode, you can only chat with people who have the same squad code as you<br>
+          You can receive kill feeds, victory feeds and player join/disconnect feedback!<br>
+          Note that chat is restricted to accounts only, and that there is a swear filter, so please be careful.
+        </div>
+        <hr>
+
+        <h1>Version 4.4.5</h1>
+        2022-07-19 - Tri Patch<br>
+        Added new worlds: Tricorn Kingdom (Royale) and Fishy Frigate (PVP)
+        <div class="note">These worlds are made by Pyriel!<br>You can try these worlds out by selecting them in a private lobby.</div>
+        Tricorn and Fishy Frigate skins have also been added to the skin shop<br>
+        Fixed loud sounds that would play when collecting multiple powerups<br>
+        Added a rudimentary "background" tool to the editor
+        <hr>
+
+        <h1>Version 4.4.4</h1>
+        2022-07-16 - Content Patch<br>
+        New tile definitions added
+        <div class="note">
+          91 - Warp Pipe Up Slow<br>
+          Up-facing warp pipes have been added. Simply be airborne then press the up key on a warp pipe<br><br>
+          92 - Warp Pipe Up Fast<br>
+          Same as the slow variant, except faster.
+        </div>
+        <hr>
+
+        <h1>Version 4.4.3</h1>
+        2022-07-12 - Editor Patch<br>
+        Editor UX Improvements
+        <div class="note">
+          Pressing "P" enables Preview Mode<br>
+          In preview mode, objects, warps and the start position shows despite whichever tool is currently active<br>
+          The start position is also now labeled with a Mario.<br>
+          The current zone selected is highlighted with yellow instead of nothing.<br>
+        </div>
+        <hr>
+
+        <h1>Version 4.4.2</h1>
+        2022-07-08 - Content Patch<br>
+        Swimming now uses the skin swim sprites.
+        <div class="note">Some skins may still use the jump sprite for swimming though.</div>
+        Warping to a different level or zone unlocks the camera if it was locked previously.
+        <hr>
+
+        <h1>Version 4.4.1</h1>
+        2022-06-26 - Content Patch<br>
+        Decreased the player's hitbox to make it easier to fit into 1 tile gaps<br>
+        Updated Leaderboard UI to look like the controls menu<br>
+        Fixed bugs that would occur when the player had a 1UP in PVP mode<br>
+        Fixed occasionally spectating other spectators in spectate mode<br>
+        You will now automatically respawn in the PVP lobby instead of entering spectate mode<br>
+        Fixed player flashing in certain states where animation is frozen (e.g. entering a pipe and climbing a vine)<br>
+        Added a direction parameter to fire breaths to fix them not working properly with object spawners<br>
+        Removed unintentional borders in the settings popup
+        <hr>
+
+        <h1>Version 4.4.0</h1>
+        2022-05-21 - Content Patch<br>
+        Spectator mode
+        <div class='note'>Finally added spectator mode<br>Once you get a game over spectator mode is automatically
+          enabled<br>As the name says, you can spectate anyone in game<br>Once everyone else is dead or you're the last
+          person to get a game over the regular game over sequence occurs<br>Supports mobile controls too!</div>
+        Editor update
+        <div class="note">Thanks to <a href="https://github.com/nightcaat">Nightcat</a> (again), the editor now has an
+          UI inspired by Windows 11<br>The editor is currently restricted to light theme, however a future update will
+          add a settings button where you can change the theme and certain other things, such as whether to use middle
+          click or left and right click, etc...<br>Please look forward to it.</div>
+        Improved custom assets
+        <div class="note">In the editor you can now set an url to use for assets instead of being limited to the github
+          repository<br>You can still use the original assets system by just typing in the json name<br>Fixed a bug in
+          which assets would get cleared when saving your world</div>
+        Mobile changes
+        <div class="note">The hud buttons in the top right can finally be used!<br>The joystick can now only be
+          activated from the left hand side of the screen</div>
+        You can no longer jump to return to the lobby
+        <div class="note">It didn't really work, it only supported regular jumps and didn't work on mobile, which is why
+          I'm removing it.</div>
+        Updated control rebinding app
+        <div class="note">Added a new "Clear" button next to every control. This button clears the binding of that
+          specific control.<br>When setting a control, the color of the control changes, like the headers.</div>
+        Added cooldown to multi coin blocks
+        <div class="note">In the original SMB1, after you hit a multi coin block, the block had a ~270ms cooldown, this
+          has been added to Mario Royale to remain faithful to the <i>original NES classic.</i></div>
+        General improvements and fixes
+        <div class="note">You can no longer update your nickname if it's less than 4 letters long, or if it's more than
+          20 letters long.</div>
+        <hr>
+
+        <h1>Version 4.3.3</h1>
+        2022-05-04 - Control Patch<br>
+        Control rebinding has been completely revamped
+        <div class="note">The control rebinding app now uses an smb1 theme, and its general appearence has
+          redesigned<br>Full credits to nightcat on the discord server!</div>
+        <hr>
+
+        <h1>Version 4.3.2.1</h1>
+        2022-04-19 - Editor Patch<br>
+        Warps now show the id they correspond to<br>
+        Added a new tile definition:
+        <div class="note">
+          161 - Flagpole level end warp<br>
+          This is a special type of level warp, in which it can be used only after the player went down the flagpole<br>
+          Can be used as a way to make smb3 levels more accurate or for anticheat, eitherway works
+        </div>
+        <hr>
+
+        <h1>Version 4.3.2</h1>
+        2022-04-17 - Content Patch<br>
+        Added new tile definitons:
+        <div class='note'>
+          13 - Item Note Block<br>
+          It functions the same as it did in SMB3, if you bump it, the powerup goes up, if you bounce on it, the powerup
+          goes down<br>
+          Ice semisolid was previously id 13, but now it is 23
+        </div>
+        Updated note blocks not to vibrate when touching the side of them<br>
+        Update world 5 to use the new spritesheet
+        <hr>
+
+        <h1>Version 4.3.1</h1>
+        2022-04-15 - Content Patch<br>
+        Improved editor user experience
+        <div class='note'>Added dropdown menu to select warp type to the warp menu</div>
+        Updated and optimized worlds
+        <div class="note">
+          These worlds have been updated to use the new spritesheet:
+          <ul>
+            <li>World 1</li>
+            <li>World 2</li>
+            <li>World 3</li>
+            <li>World 4</li>
+            <li>Lost World 8</li>
+            <li>Special 1</li>
+            <li>Special 2</li>
+            <li>Special 3</li>
+          </ul>
+          These worlds have been updated to use progressive item blocks too
+        </div>
+        <hr>
+
+        <h1>Version 4.3.0</h1>
+        2022-04-03 - Content Patch<br>
+        Added option to change the distance of how many blocks the player moves after going down a flagpole
+        <div class='note'>Using negative numbers makes the player go in reverse too!</div>
+        Added option to toggle piranha plant Offset
+        <div class='note'>By default piranha plants are offset by half a tile to fit in 2 tiled pipes<br>Intended for
+          use with single pipes and such</div>
+        Shortened time it takes to transition to a level now that it is possible to change the flagpole auto target<br>
+        Added option to toggle movement of the star powerup
+        <div class='note'>Using 1 as the parameter disables jumping and moving for the star</div>
+        Disabled star killing in the lobby
+        <div class='note'>This was patched for obvious reasons</div>
+        Fixed being able to interact with the corner buttons when in victory state
+        <div class='note'>In short, on the podium the buttons were just hidden and you could still interact with them
+        </div>
+        Updated editor about button to show basic information
+        <div class='note'>Patched since people kept coping about it being a rickroll</div>
+        Fixed weird entrance hitbox of single pipes<br>
+        Replaced leaderboard close button with x button in the top right corner<br>
+        Updated leaderboard interface
+        <div class='note'>In short, added border to whichever leaderboard category is selected for accessibility
+          purposes<br>Also fixed z index layer of leaderboard pop-up</div>
+        Changed some more text in the editor<br>
+        Added auto refresh toggle to leaderboard menu
+        <div class='note'>By default its off to conserve bandwidth<br>If its on, leaderboards can update without
+          reloading the page</div>
+        Improved control rebinding app
+        <div class='note'>Added two buttons to reset keyboard and gamepad controls respectively</div>
+        Added more object icons to editor
+        <div class='note'>Specifically: Spring, Spiny Shell, Buzzy Beetle, Bowser, Hammer Bro, Piranha Plant and a few
+          others</div>
+        Fixed editor occasionally spawning goomba instead of player<br>
+        Added new tile definitions:
+        <div class='note'>
+          89 - Warp Pipe Left Slow<br>
+          Same as warp pipe right slow and fast, but left<br><br>
+
+          90 - Warp Pipe Left Fast<br>
+          Same as warp pipe left slow, but fast
+        </div>
+        Fixed inaccurate direction when exiting a pipe of a different direction
+        <hr>
+
+        <h1>Version 4.2.2</h1>
+        2022-03-26 - Content Patch<br>
+        Added new tile Definitions
+        <div class='note'>
+          30 - Lock X Axis Camera<br>
+          Self-explanatorily locks x camera movement<br><br>
+          31 - Unlock X Axis Camera<br>
+          Unlocks x camera movement, provided the camera is locked
+        </div>
+        You will now automatically use your taunting sprite when going down a pipe<br>
+        Added spinies and buzzy beetles to the underground in the lobby
+        <hr>
+
+        <h1>Version 4.2.1</h1>
+        2022-03-14 - Content Patch<br>
+        Added spiny shell enemy
+        <div class='note'>Though no worlds currently use it</div>
+        Grabbing flagpole while blinking no longer freezes you in the sprite you were when you were blinking<br>
+        You can now set custom podium victory music
+        <div class='note'>Updated pastel to use this feature, as before it would play the regular smb victory music
+        </div>
+        <hr>
+
+        <h1>Version 4.2.0</h1>
+        2022-03-07 - Content Patch<br>
+        Funny version number lmao!<br>
+        Added new tile definitions:
+        <div class='note'>
+          21 - Progressive Item Block Invisible<br>
+          Same as the visible progressive block, but invisible.<br><br>
+          87 - Warp Pipe Single Slow<br>
+          88 - Warp Pipe Single Fast<br>
+          Same as warp pipes but they are meant to be used as 1 block tiles
+        </div>
+        Timer no longer returns to full form when touching the flag on mobile<br>
+        Fixed the bug where taunting was impossible on mobile
+        <div class='note'>While on this topic, taunting on the podium is intentional,<br>as before taunts there was
+          basically no player interaction on the podium</div>
+        Fixed the bug where having automove selected on a refresh would, while active,<br> not show as it on the
+        settings menu, this change is also applied to..<br>
+        Added new compact mode
+        <div class='note'>
+          Virtually mobile mode but on desktop<br>
+          Timer takes the same appearence as on mobile, just 00:00<br>
+          Enabling compact mode also enables the classic victory screen<br>
+          Match stats are also hidden in compact mode<br>
+          These changes have also been applied to mobile
+        </div>
+        In the editor, you can now click the example links to automatically download them to your hard drive
+        <div class='note'>
+          Also added world special to the example world selection<br>
+          Also changed some text on the menu screen LOL
+        </div>
+        Developer sprites are transparent again, their nametag is still yellow however<br>
+        <span style='color:red;'>Clear your browser cache to get new update!</span>
+        <hr>
+
+        <h1>Version 4.1.9.1</h1>
+        2022-02-23 - Content Patch<br>
+        You can now run across 1 block gaps, as long as you're runnin'
+        <hr>
+
+        <h1>Version 4.1.9</h1>
+        2022-02-21 - Bugfix Patch<br>
+        Fixed a bug where a powerup would keep rising out of a question block if there was a solid tile 2 blocks above
+        the question block
+        <div class='note'>In short, you can get the mushroom in special 2 now</div>
+        <hr>
+
+        <h1>Version 4.1.8</h1>
+        2022-02-19 - Content Patch<br>
+        Added ability to taunt in-game
+        <div class='note'>Just press the up button, of course it can be rebinded<br>Most of the skins will need to be
+          updated, unsupported skins just display the standing sprite</div>
+        Added more skins
+        <hr>
+
+        <h1>Version 4.1.7</h1>
+        2022-02-05 - Content Patch<br>
+        Green and red koopas can now hit item and coin blocks!
+        <div class='note'>Now you can have fun getting the fire flower you always wanted in smb3!</div>
+        Added 5 more skins to the skin shop<br>
+        <span style="color:red;">Clear your browser cache to get update!</span>
+        <hr>
+
+        <h1>Version 4.1.6</h1>
+        2021-02-04 - Bugfix patch<br>
+        Fixed a bug with semisolids that caused lots of softlocks
+        <div class='note'>While bugfixes shouldn't take a full version bump, it was such a problem for so long<br>that i
+          think it deserves the version bump.</div>
+        <span style="color:red;">Clear your browser cache to get update!</span>
+        <hr>
+
+        <h1>Version 4.1.5</h1>
+        2021-01-30 - Content Patch<br>
+        Added new Tile Definitions
+        <div class='note'>
+          13 - Ice Tile Block<br>
+          Acts like the SMB3 ice coin block, you can set the parameter as the tile you want it to change to when hit by
+          a fireball<br><br>
+          16 - Ice Object Block<br>
+          Same thing as ice tile block but you can set the parameter to be an object
+        </div>
+        Added new worlds
+        <div class='note'>
+          World 3 and 6 from the Super Mario Bros.: Special game
+        </div>
+        <span style='color:red;'>Clear your browser cache to get update!</span>
+        <hr>
+
+        <h1>Version 4.1.4</h1>
+        2022-01-22 - Content Patch<br>
+        Added new tile definition
+        <div class='note'>
+          241 - Sound Block<br>
+          This is a non solid tile that plays a sound from its parameter.
+        </div>
+        Fixed description of piranha plant in editor<br>
+        Editor popup now applies to more things
+        <div class='note'>Creating a new level, resizing, and creating new warp</div>
+        Our discord server now has 400 members! Nice!<br>
+        <span style='color:red;'>Clear your browser cache to get changes.</span>
+        <hr>
+
+        <h1>Version 4.1.3</h1>
+        2022-01-14 - Content Patch<br>
+        The editor now throws a warning when leaving an unsaved world.<br>
+        Some skin flip flopping, great
+        <div class='note'>
+          There are now 6 toads, that's nice.<br>
+          We have now passed 150 skins, that's great<br>
+          Adjusted pricing of nathan spencer skins<br>
+          Added 5 new skins!
+        </div>
+        <span style='color:red;'>Clear your browser cache to receive update!</span>
+        <hr>
+
+        <h1>Version 4.1.2b</h1>
+        2021-12-31 - Small Patch<br>
+        Moved skin shop button to main menu (signed in)<br>
+        Fixed having to refresh every time when buying a skin
+        <div class='note'>Now you can just press return and it won't refresh</div>
+        Backend skin validation improvements<br>
+        Added a few new skins, and fixed spelling of the impostor skin<br>
+        <span style='color:red;'>Clear your browser cache to receive update!</span>
+        <hr>
+
+        <h1>Version 4.1.2</h1>
+        2021-12-29 - Content Patch<br>
+        Semi-major update to SMB3 World 1
+        <div class='note'>You will now automatically go to the king's chamber<br>like in the original game when
+          defeating a koopaling</div>
+        Added SMB3 World 2
+        <div class='note'>Obviously, a recreation of the Desert Land of SMB3<br>The world has been recreated by
+          simonixen07, updated by casini loogi</div>
+        Added a familiar lobby back, depends if you recognize it..<br>
+        Clearing your cache is not required for this update.
+        <hr>
+
+        <h1>Version 4.1.1</h1>
+        2021-12-24 - Content Patch<br>
+        <i>"ALMOST CHRISTMAS" means it wasn't christmas!</i><br>
+        Added a link to the editor on the stats bar<br>
+        When selecting an object in the editor, it will now show a detailed 'explanation' of the object<br>
+        Added 5 new skins, varying prices.<br>
+        <span style='color:red;'>Clear your browser cache to receive changes!</span>
+        <hr>
+
+        <h1>Version 4.1.0c</h1>
+        2021-12-17 - Bugfix patch<br>
+        Fixed a bug with the profile skin select
+        <div class='note'>
+          Apparently, if you selected a skin but didn't save and instead pressed 'cancel',<br>
+          when you would return to the profile it would have two skins selected<br>
+          and selecting another one wouldn't fix it, now that is fixed.
+        </div>
+        <span style='color:red;'>Clear your browser cache to receive fixes!</span>
+        <hr>
+
+        <h1>Version 4.1.0b</h1>
+        2021-12-13 - Bugfix patch<br>
+        Fixed editor removing assets parameter when saving<br>
+        Same thing but the podiumLoop parameter
+        <hr>
+
+        <h1>Version 4.1.0</h1>
+        2021-12-13 - Content Patch<br>
+        Added skin shop (FINALLY!)
+        <div class='note'>
+          Upon entering the game, you will see in your profile a skin shop button,<br>
+          and that your skin selection only has two available skins.<br>
+          In the skin shop you can rebuy your skins with the right amount of coins<br>
+          When you purchase a skin, your coin count will decrease and you have bought the skin<br>
+          But you will have to refresh to be able to use the skin.<br>
+          Note: clear your cookies if you are playing as a Guest
+        </div>
+        Balanced the coin economy
+        <div class='note'>
+          Due to the low cost of skins, coin rewards had to be changed, such as;<br>
+          Winning reward : 1st 100 ; 2nd 50 ; 3rd 25<br>
+          Flagpole reward : 20<br>
+          Golden Flower : 500<br>
+          Star Kill / Fireball Kill (PVP) : 30
+        </div>
+        Added Metroid world
+        <div class='note'>A recreation of the NES classic<br>This world was made by casini loogi</div>
+        Added Special World 5
+        <div class='note'>Recreation of the Super Mario Bros. Special World<br>Created by Spiral Tawa</div>
+        <span style='color:red;'>Clear your browser cache to receive changes!</span>
+        <hr>
+
+        <h1>Version 4.0.5</h1>
+        2021-12-07 - Content Patch<br>
+        Added flip blocks
+        <div class='note'>SMW has been updated to use them already.</div>
+        Fixed a bug that allowed killing piranha plants through pipes<br>
+        Removed two pointers from the main menu to make it 60% cleaner<br>
+        <span style="color:red;">Clear your browser cache to receive changes!</span>
+        <hr>
+
+        <h1>Version 4.0.4</h1>
+        2021-12-02 - Content Patch<br>
+        404 - Update not found
+        <div class='note'>lol funny joke xd 1000 upvotes</div>
+        Added winter theme until 2022
+        <div class='note'>Just like halloween, but earlier</div>
+        Fixed alignment of control button on main menu<br>
+        A few more skins added too, yes a big achievement<br>
+        <span style='color:red;'>Clear your browser cache to receive changes!</span>
+        <hr>
+
+        <h1>Version 4.0.3</h1>
+        2021-11-28 - Content Patch<br>
+        You can now modify the speed of firebars
+        <div class='note'>The default speed is 23, negative values make the firebar go in reverse<br>If the speed is 0
+          then the firebar will disappear.</div>
+        Fixed some slight world 4 problems<br>
+        Leaderboards menu will disappear when pressing the play button when active<br>
+        <span style="color:red;">Clear your browser cache to receive changes!</span>
+        <hr>
+
+        <h1>Version 4.0.2</h1>
+        2021-11-25 - Content Patch<br>
+        Leaderboards can now be updated live without closing and opening the window<br>
+        <div class='note'>The server also now refreshes leaderboards every 10 seconds instead of 60 seconds</div>
+        You can now set custom zoom caps in your levels!
+        <div class='note'>"minZoom": [number] (for minimum zoom)<br>"maxZoom": [number] (for maximum zoom)<br>If there
+          is a problem with the values it'll default to the regular values<br>However, this goes over all worlds so be
+          careful when you use it.</div>
+        <span style="color:red;">Clear your browser cache to receive changes!</span>
+        <hr>
+
+        <h1>Version 4.0.1</h1>
+        2021-11-20 - Content Patch<br>
+        Added static Piranha Plants
+        <div class='note'>To make Piranha Plants static, set 1 as the movement parameter in the editor,<br>else leave it
+          blank.</div>
+        Honestly this update is just so I don't turn into GoNow 2.0
+        <hr>
+
+        <h1>Version 4.0.0</h1>
+        2021-10-27 - Content Patch<br>
+        ADDED Leaderboards
+        <div class='note'>
+          They work the same way they used to.<br>
+          Leaderboards show the top 10 players of 3 categories, coins, wins and kills.<br>
+          Leaderboards are also refreshed every 60 seconds.<br>
+          Good luck climbing the leaderboards and happy grinding!
+        </div>
+        <hr>
+
+        <h1>Version 3.9.9.2</h1>
+        2021-10-27 - Content Patch<br>
+        Added halloween themed object sheet ( for now ;) )<br>
+        Added force start button to developer console.<br>
+        <span style='color:red;'>Clear your browser cache to get new update!</span>
+        <hr>
+
+        <h1>Version 3.9.9.1</h1>
+        2021-10-26 - Content Patch<br>
+        Added halloween versions of menu backgrounds<br>
+        Halloween themed the lobby<br>
+        Added woodman [from Mega Man] world
+        <div class='note'>This world is created by casini loogi (labeled as w in world select)</div>
+        Updated fireman [from Mega Man] world<br>
+        <span style='color:red;'>The halloween updates will last until the end of october</span>
+        <hr>
+
+        <h1>Version 3.9.9</h1>
+        2021-09-24 - Content Patch<br>
+        Added support for looping podium music.
+        <div class='note'>"podiumLoop":true in the world json to make it happen.</div>
+        <hr>
+
+        <h1>Version 3.9.8</h1>
+        2021-09-19 - Content Patch<br>
+        Updated the order of skins in the skin select page.
+        <div class='note'>If your skin is different just change it back.</div>
+        Updated Neon to fix lava.<br>
+        We are approaching version 4.0.0!
+        <hr>
+
+        <h1>Version 3.9.7</h1>
+        2021-09-17 - Content Patch<br>
+        Removed PVP DMCA due to a million camping spots<br>
+        Added Mario Zone World
+        <div class='note'>Created by Casini Loogi. Labeled as 'MZ' in world select.</div>
+        Added Mario Zone PVP World
+        <div class='note'>Mostly a revamped Land 2 PVP</div>
+        <hr>
+
+        <h1>Version 3.9.6</h1>
+        2021-09-14 - Content Patch<br>
+        Added 60fps animation to water in SMW<br>
+        Separated power down and pipe sound effects for easier level creation.
+        <div class='note'>Also separated the swimming sound effect with the stomp sound effect.</div>
+        Replaced the "N" button functionality, now it's a filter names toggle.<br>
+        Replaced the disclaimer message.<br>
+        Added custom swim sound listed above.<br>
+        Changed minimum votes to 5, because 15 was impossible to get before.<br>
+        Made the world start countdown timer 10 seconds to help slower connections load worlds faster.<br>
+        <span style='color:red;'>CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span>
+        <hr>
+
+        <h1>Version 3.9.5</h1>
+        2021-09-11 - Content Patch<br>
+        <div class='note'>Note: Date on last patch is wrong but I forgot which day it actually was so it'll have to
+          stay.</div>
+        Usernames are now always visible regardless of squad code.
+        <div class='note'>Would have created a toggle but most people would've kept it as is so meh</div>
+        Fixed 90% of crashes that would happen during matches<br>
+        Edgeworth<br>
+        Settings window now has its own X button.<br>
+        Minimum votes has been changed to 2 for fun.
+        <div class='note'>This will be changed back tomorrow</div>
+        Player cap has been changed and is now 30.<br>
+        <span style="color:red;">CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span>
+        <hr>
+
+        <h1>Version 3.9.4</h1>
+        2021-08-26 - Content Patch<br>
+        Fixed softlock in Super Mario Land world<br>
+        Improved final area in Super Mario World.. world.
+        <hr>
+
+        <h1>Version 3.9.3</h1>
+        2021-08-26 - Content Patch<br>
+        Added new tile definitions:
+        <div class='note'>
+          15 - Non-Solid Damage block<br>
+          Same as solid damage, but not solid.<br>
+          20 - Progressive Item block<br>
+          If a small player hits it, it dispenses a mushroom, if a big/flower player hits it, a fire flower will be
+          dispensed.
+        </div>
+        Item blocks are now synced in PVP because it made no sense to not sync after 3.7.6.<br>
+        Return to lobby button in settings will now be shown and hidden properly.
+        <div class='note'>P.S Check this video out by LinkyTay!: <a
+            href="https://www.youtube.com/watch?v=2BdBR1rQPI4">https://www.youtube.com/watch?v=2BdBR1rQPI4</a></a></div>
+        <hr>
+
+        <h1>Version 3.9.2</h1>
+        2021-08-19 - Content Patch<br>
+        Added custom animated tiles to SMW, SMB3 and SMB2.<br>
+        Clearing cache for this update is not required.
+        <hr>
+
+        <h1>Version 3.9.1</h1>
+        2021-08-17 - Bugfix Patch<br>
+        Added back SMB2 world<br>
+        Fixed custom tile assets files.
+        <div class='note'>PS: If the editor throws a warning, you'll have to go into the json yourself and add the
+          assets file.<br>It sucks, but, I could not find a solution</div>
+        Fixed weird alignment of name on profile screen.<br>
+        COMING SOON: In-game chat (In which you can actually scroll in!)
+        <div class='note'>Might have to restrict this to accounts to prevent spam, but who knows? Let US know in our
+          discord server.</div>
+        <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span>
+        <hr>
+
+        <h1>Version 3.9.0</h1>
+        2021-08-15 - Content Patch<br>
+        All skins are now available to guests as well.<br>
+        Added support for custom tile animation files.
+        <div class='note'>This allows for SMB3/SMW styled blocks to not appear weird,<br>however no worlds currently use
+          it.</div>
+        Made a very minor tweak on the server.<br>
+        Gray area of register/login/password-change screens won't show if there's no message to show.<br>
+        <span style="color: red; font-weight: bold">CLEAR YOUR CACHE FOR EVERYTHING TO WORK PROPERLY!</span>
+        <hr>
+
+        <h1>Version 3.8.9</h1>
+        2021-08-08 - Content Patch<br>
+        Ice deceleration has been made slightly shorter.<br>
+        Link elements will properly stay on the menu instead of disappearing now.<br>
+        Level warp time is a bit longer so that the music won't randomly cut off.<br>
+        Removed the 'controls' button from the settings menu.
+        <div class='note'>It was basically useless because controls wouldn't change while in-game.</div>
+        Increased framerate by a tick.<br>
+        Wow, 8 days without an update? Take my breathing rights away.<br>
+        <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span>
+        <hr>
+
+        <h1>Version 3.8.8</h1>
+        2021-07-30 - Content Patch<br>
+        Added note blocks
+        <div class='note'>Also updated SMB3, but since the item variation<br>doesn't exist yet, item note blocks don't
+          work yet.</div>
+        Added snow world
+        <div class='note'>Created by casini loogi, it uses ice blocks and the 1up flag award.</div>
+        Added ice semisolids, however no worlds use them yet.<br>
+        Disabled late entering a match due to a bug that I had no idea how to fix otherwise.<br>
+        Made ice decelartion shorter because it felt unfair to die because of it.
+        <hr>
+
+        <h1>Version 3.8.7</h1>
+        2021-07-29 - Content Patch<br>
+        If flag extra data is set to "2", the player receives a 1UP instead of coins.<br>
+        Added ice blocks
+        <div class='note'><strike>The ice block works but once you touch it you can't
+            <br>go back to normal physics due to a problem.</strike>
+          <br>This issue has been fixed and ice blocks are now functional!
+        </div>
+        Removed initial loading screen.<br>
+        <strike>Links won't be hidden when entering a separate menu.</strike> (never mind..)<br>
+        Added note blocks
+        <div class='note'>Animated tiles for these also exist.</div>
+        Clear your browser cache to get update.
+        <hr>
+
+        <h1>Version 3.8.6</h1>
+        2021-07-26 - Content Patch<br>
+        Yoshi's Island has been updated to use SNES graphics and will now be referred to as "Super Mario World"
+        <div class='note'>Now labeled as "MW" in world select.</div>
+        Fixed accidental usage of wrong palette for Special 2<br>
+        Removed barrier for the big lads area.<br>
+        Fixed editor example world file extensions.<br>
+        Updated <span style="background-color: #0066AF;">"Neon World - Castle"</span> to not be underwhelming.<br>
+        Fixed weird collision for fence in Neon Airship
+        <hr>
+
+        <h1>Version 3.8.5</h1>
+        2021-07-25 - Content Patch<br>
+        Fixed depth of pipes in special world 2<br>
+        Special world 1 now uses the same palette as special world 2<br>
+        You will no longer be granted a life upon starting the game.
+        <div class='note'>In an attempt to make the game easier I made it a lot easier.</div>
+        Fixed custom music not playing due to a patch from the last version.
+        <hr>
+
+        <h1>Version 3.8.4</h1>
+        2021-07-24 - Content Patch<br>
+        Fixed Neon World collision bugs.<br>
+        Added Super Mario Bros. 2 (USA) World<br>
+        <div class='note'>Labeled as M2 in world select.</div>
+        Added Super Mario Bros. 2 (USA) skins.<br>
+        Fixed PVP bugs.<br>
+        <div class='note'>Mostly it sometimes only working in private lobbies.</div>
+        Fixed random disconnections after a player's death.<br>
+        Added 15+ new skins to the skin selection.<br>
+        Removed the <span style="background-color: #0066AF;">"Attempted to instance partially loaded sound data"</span>
+        message.
+        <div class='note'>It always appeared trying to load regular audio files and never when a file was missing.</div>
+        Removed remaining leaderboard code. <br>
+        You will now start with 1 life instead of starting with 0 lives.<br>
+        <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span>
+        <hr>
+
+        <h1>Version 3.8.3</h1>
+        2021-07-19 - Content Patch<br>
+        Added back original snow world as a hell world map.
+        <div class='note'>Labeled as "SN" in world select.</div>
+        Reverted menu theme.<br>
+        Added back fire man world.
+        <div class='note'>This is the good version of it. Labeled as "F" in world select.</div>
+        Patch tab icon shows up properly now.
+        <hr>
+
+        <h1>Version 3.8.2</h1>
+        2021-07-16 - Content Patch<br>
+        Fixed the Snow PVP map.<br>
+        Moved the <span style="background-color: #0066AF;">"Change Password"</span> button to the profile screen
+        again.<br>
+        Added a cancel button to the profile for a quick return, however options won't be saved.<br>
+        To help prevent client crashes, GFX Mods will only accept PNG format files. <br>
+        Discord: An image of #1 Victory Royale will appear when somebody wins.
+        <hr>
+
+        <h1>Version 3.8.1</h1>
+        2021-07-15 - Editor Patch<br>
+        You can now change the music and sfx override path directly from the editor<br>
+        main0.mp3 is now the default music by default.
+        <hr>
+
+        <h1>Version 3.8.0</h1>
+        2021-07-14 - Content Patch<br>
+        Neon World is finally in Mario Royale!
+        <div class='note'>After nearly 2 years of waiting, it is finally completed.</div>
+        Added back 5 neon skins.<br>
+        Fixed alignment of the control button.<br>
+        The background is blue again.<br>
+        You can now change your account password directly from the menu instead of the profile on a separate menu.<br>
+        <div class='note'>That both hurt to write and read.</div>
+        Camera no longer frozen when finishing a level.<br>
+        Discord patch: Administrators and moderators can no longer speak in #news.
+        <hr>
+
+        <h1>Version 3.7.9</h1>
+        2021-07-13 - Content Patch<br>
+        Added new royale world: Special World 2<br>
+        Added new PVP world: Palette plains<br>
+        Added one more skin<br>
+        Ingame timer now properly stops in PVP<br>
+        Guests can now use 5 skins instead of 4. <br>
+        Removed leaderboard menu.<br>
+        <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span>
+        <hr>
+
+        <h1>Version 3.7.8</h1>
+        2021-07-11 - Account Patch<br>
+        Stats are now stored on the server instead of being stored in cookies.
+        <div class='note'>No more <strike>Fortnite</strike> stat cheating!</div>
+        <hr>
+
+        <h1>Version 3.7.7</h1>
+        2021-07-11 - Content Patch<br>
+        Changed player cap to 30<br>
+        Adjusted podium coin rewards
+        <div class='note'>1st place: 1000 coins<br>
+          2nd place: 500 coins<br>
+          3rd place: 250 coins
+        </div>
+        Adjusted flagpole reward to 250 coins<br>
+        Fixed Infringio [linkytay's patch]<br>
+        Added new PVP map: DMCA <br>
+        Added new skins
+        <hr>
+
+        <h1>Version 3.7.6</h1>
+        2021-07-08 - Content Patch<br>
+        PVP Mode has been revamped!
+        <div class='note'>2 players are required to start the game, last one standing wins.</div>
+        Added new PVP worlds, such as:
+        <div class='note'>
+          - Big Island [wingcapman] <br>
+          - Classic [wingcapman] <br>
+          - Mario Land 2 [casini loogi] <br>
+          - Mario VS Luigi [dimension] <br>
+          - McArena [pyriel] <br>
+          - Snow [banzai bill]
+        </div>
+        New skin <br>
+        <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET UPDATE!</span>
+        <hr>
+
+
+        <h1>Version 3.7.5</h1>
+        2021-07-08 - Editor Patch<br>
+        You can now change the gamemode directly from the editor in the world tab.
+        <hr>
+
+        <h1>Version 3.7.4</h1>
+        2021-07-07 - Content Patch<br>
+        Tracking statistics is functional again, however leaderboards are now forever dead.
+        <hr>
+
+        <h1>Version 3.7.3</h1>
+        2021-07-07 - Editor Patch<br>
+        You will now need to right click to copy [clone tool].<br>
+        Fixed width of login, register and change password screens.<br>
+        Additional note: Patch notes will also be listed on <a
+          href="https://github.com/mroyale/mroyale-client/releases">GitHub</a>.
+        <hr>
+
+        <h1>Version 3.7.2</h1>
+        2021-07-06 - Content Patch<br>
+        Added a <span style="background-color: #0066AF;">"Return to Lobby"</span> button in the settings<br>
+        Level select will now accept text [.txt] files as well. <br>
+        <div class='note'>The editor now also accepts .json and .txt instead of everything, but you still have the
+          option for everything.</div>
+        Fixed additional tile corruptions <br>
+        <div class='note'>Worlds: hell 2, lost 4</div>
+        The item block near the start of Hell 2-2 is now infinite. <br>
+        <div class='note'>Just to make the "you only have one shot" thing a little less prominent.</div>
+        Added new hell worlds<br>
+        <div class='note'>Hell World 4 and Yoshi's Island</div>
+        Editor patch: You will now need to right click instead of middle click to create an object. <br>
+        More skins! <br>
+        <hr>
+
+        <h1>Version 3.7.1</h1>
+        2021-07-05 - Content Patch<br>
+        Fixed tile corruptions<br>
+        <div class='note'>Worlds: lobby, world 4, world lost d, world minus</div>
+        Fixed discord link<br>
+        Updated lobby to accommodate new developers<br>
+        Return to Lobby button fixed.<br>
+        Save button on the profile screen works again.<br>
+        Added back editor worlds [https://marioroyale.nightc.at/royale/editor.html]<br>
+        Fixed controls to add turbo jump setting<br>
+        <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET UPDATE!</span><br>
+        <hr>
+
+        <h1>Version 3.7.0e</h1>
+        2021-07-05 - GitHub<br>
+        If you find any bugs, please report them on <a
+          href="https://github.com/mroyale/mroyale-client/issues/">GitHub</a> or #mario-royale-bugs on our Discord.<br>
+        <hr>
+
+        <h1>Version 3.7.0</h1>
+        2021-07-01 - God dammit<br>
+        Reverted back to 3.7.0, the game kept breaking itself.<br>
+        Camera will now be frozen when finishing a level.
+        <hr>
+
+
+        <h1>Version 3.6.4</h1>
+        2020-01-26 - Content Patch<br>
+        Fixed error messages on console when object spawner spawns non-enemy objects.<br>
+        Private lobby settings window can be closed and reopened from settings.<br>
+        Level warp clears out the player's speed.
+        <hr>
+
+        <h1>Version 3.6.3</h1>
+        2020-01-25 - Content Patch<br>
+        Fixed star music lingering from lobby to game.<br>
+        Fixed players in the middle of teleporting showing as explosion sprites.<br>
+        Fixed inability to delete layers in the editor.
+        <hr>
+
+        <h1>Version 3.6.2</h1>
+        2020-01-22 - Content Patch<br>
+        Added object spawner block.
+        <hr>
+
+        <h1>Version 3.6.1</h1>
+        2020-01-18 - Content Patch<br>
+        Added infinite item block.<br>
+        Improved object type selection and object parameter entry in the editor.
+        <hr>
+
+        <h1>Version 3.6.0</h1>
+        2020-01-14 - Content Patch<br>
+        Devs' sprites are no longer transparent.<br>
+        Added controls button to the options menu.<br>
+        Fix: upside-down piranha plant hitbox and sprite position didn't match.<br>
+        Fix: not slowing down on the floor while underwater and not holding a button.
+        <hr>
+
+        <h1>Version 3.5.9</h1>
+        2020-01-09 - Content Patch<br>
+        Guests can now only use a limited set of skins.
+        <hr>
+
+        <h1>Version 3.5.8</h1>
+        2019-12-31 - Content Patch<br>
+        Fireballs are now skin-based.
+        <hr>
+
+        <h1>Version 3.5.7</h1>
+        2019-12-15 - Content Patch<br>
+        Added water physics (level must be updated to use it).<br>
+        Improved user experience for the tile editor.
+        <hr>
+
+        <h1>Version 3.5.6</h1>
+        2019-12-05 - Content Patch<br>
+        Added return to main button in in-game menu and victory screen.
+        <hr>
+
+        <h1>Version 3.5.5</h1>
+        2019-11-30 - Content Patch<br>
+        Added support for overriding the entire sound/music set on a per-level basis.
+        <hr>
+
+        <h1>Version 3.5.4</h1>
+        2019-10-23 - Content Patch<br>
+        Stats bar now shows in the lobby as well as on the main menu.<br>
+        Physics fix: picking up a powerup while standing on a spring no longer launches you into the sky.
+        <hr>
+
+        <h1>Version 3.5.3</h1>
+        2019-10-22 - Content Patch<br>
+        Added auto move option to the settings window.<br>
+        Physics fixes: move speed check for entering pipes made symmetrical for moving left vs right, entering a pipe
+        resets horizontal speed.
+        <hr>
+
+        <h1>Version 3.5.2</h1>
+        2019-10-20 - Content Patch<br>
+        Added sound effects for Gold Flower and Spring.
+        <hr>
+
+        <h1>Version 3.5.1</h1>
+        2019-10-19 - Content Patch<br>
+        Lobby status display changed to: Players / Votes / Time to start
+        <hr>
+
+        <h1>Version 3.5.0</h1>
+        2019-10-18 - Content Patch<br>
+        Added a death penalty of 10 coins and added coin bonuses for killing players, touching the top of the flagpole
+        and finishing on the podium.
+        <hr>
+
+        <h1>Version 3.4.8</h1>
+        2019-10-08 - Content Patch<br>
+        Added GFX test feature to private lobbies.
+        <hr>
+
+        <h1>Version 3.4.7</h1>
+        2019-10-06 - Content Patch<br>
+        Added a switch to display other players as Mario.
+        <hr>
+
+        <h1>Version 3.4.6</h1>
+        2019-10-02 - Content Patch<br>
+        Added page navigator for the skin select page navigator.
+        <hr>
+
+        <h1>Version 3.4.5</h1>
+        2019-09-30 - Content Patch<br>
+        Added upside-down Piranha Plant.
+        <hr>
+
+        <h1>Version 3.4.4</h1>
+        2019-09-28 - Content Patch<br>
+        Added hammer-throwing Bowser (maps must be updated first).
+        <hr>
+
+        <h1>Version 3.4.3</h1>
+        2019-09-27 - Content Patch<br>
+        Support for object animations in assets.json.
+        <hr>
+
+        <h1>Version 3.4.2</h1>
+        2019-09-23 - Content Patch<br>
+        Tile animations moved to assets.json for easier editing.
+        <hr>
+
+        <h1>Version 3.4.1</h1>
+        2019-09-18 - Content Patch<br>
+        Add support for multi-layered levels.
+        <hr>
+
+        <h1>Version 3.4.0</h1>
+        2019-09-14 - Content Patch<br>
+        Allow levels to override the victory music.
+        <hr>
+
+        <h1>Version 3.3.9</h1>
+        2019-09-13 - Content Patch<br>
+        The "A" button is changed to only jump once per button press. A new control "Turbo A" has been added that works
+        like "A" used to.<br>
+        Default zoom level changed to be based on browser window size.
+        <hr>
+
+        <h1>Version 3.3.8</h1>
+        2019-09-11 - Content Patch<br>
+        Added "hurry up" mode. Currently only triggered when the server is going down for maintenance.
+        <hr>
+
+        <h1>Version 3.3.7</h1>
+        2019-09-10 - Content Patch<br>
+        Added Rename Player feature to dev console<br>
+        Player name prefixes ([G] and [DEV]) are now generated on the client side
+        <hr>
+
+        <h1>Version 3.3.6</h1>
+        2019-09-07 - Content Patch<br>
+        Added Dev Console
+        <hr>
+
+        <h1>Version 3.3.5</h1>
+        2019-09-01 - Content Patch<br>
+        Added leader boards for Wins, Coins and Kills
+        <hr>
+
+        <h1>Version 3.3.4</h1>
+        2019-08-30 - Technical Patch<br>
+        Player statistics (wins, deaths, kills and coins) are now stored on the server side instead of in cookies.
+        <hr>
+
+        <h1>Version 3.3.3</h1>
+        2019-08-24 - Technical Patch<br>
+        Smarter skin loading to reduce time spent on "Loading resources".
+        <hr>
+
+        <h1>Version 3.3.2</h1>
+        2019-08-24 - Technical Patch<br>
+        Levels are now stored on server side and not retrieved via HTTP.
+        <hr>
+
+        <h1>Version 3.3.1</h1>
+        2019-08-15 - Technical Patch<br>
+        Devs always have their names shown and it is shown in yellow instead of white.<br>
+        Fixed some bugs related to player spawning when entering the game.
+        <hr>
+
+        <h1>Version 3.3.0</h1>
+        2019-08-15 - Technical Patch<br>
+        Proper handling of errors when updating profile.
+        <hr>
+
+        <h1>Version 3.2.2</h1>
+        2019-08-10 - Content Patch<br>
+        More new skins have been added, some with custom music! (Thank you to Rothiseph for helping with music, and to
+        our discord community for the skins).<br>
+        Xexyz World has been extended and added to Level Select. (Thanks to Piesel for making that world!)<br>
+        To those of you out there that can, please spread word of the game! We would like our player base to grow so we
+        can add more game modes and worlds in the future.
+        <hr>
+
+        <h1>Version 3.2.1</h1>
+        2019-07-29 - Content Patch<br>
+        60 new skins have been added to the game!<br>
+        Hell mode 1-1 has been updated. You can see a walkthrough here: https://www.youtube.com/watch?v=vO-ambqP2gI<br>
+        <div class='note'>After this video some slight changes has been done to make the "1 up jump" a little
+          easier.<br>And, don't let the video leads you to understand that mobs are needed, they aren't.</div>
+        To be fair, item boxes (aka. mystery boxes with a powerup in it) are now desynced in Hell Mode.<br>
+        Kills with fire ball in PvP mode now adds to the stats.<br>
+        Now bullet bills launcher can shoot to the right.
+        <div class='note'>Just use the parameter ",1"</div>
+        <hr>
+
+        <h1>Version 3.2.0</h1>
+        2019-07-28 - Content Patch<br>
+        Wow, 4 pages of skins!<br>
+        New icon to toggle private room.<br>
+        Now you can switch game modes:<br>
+        <div class='note'>Royale mode<br>The default mode, you know it very well.<br>PVP mode<br>It is like the royale
+          mode (for now?), but you spawn with a fire flower and you can hurt other players with it, also, item boxes are
+          desynced in this mode.<br>Hell mode<br>Only very hard maps, for now only featuring a new (very incomplete)
+          world 1-1.</div>
+        New tile definitions:
+        <div class='note'>4 - SOLID DAMAGE<br>Damage players when they touch it.<br>5 - SEMISOLID<br>Players can walk on
+          it and jump through it.<br>6 - SEMISOLID WEAK<br>Same as SEMISOLID but only small mario can walk on it.</div>
+        Now password can be changed in main menu when logged-in.<br>
+        Now water is animated.<br>
+        Now custom/external music should load correctly in custom levels.<br>
+        The DMCA world has been updated.
+        <hr>
+
+        <h1>Version 3.1.0</h1>
+        2019-07-20 - Content Patch<br>
+        Now the skin selector have a pagination to accommodate more skins.<br>
+        New world: DMCA (D)<br>
+        Now SFX again work properly in firefox.<br>
+        Goombas now despawn faster after being bonked.<br>
+        Now char unique theme music can be disabled or enabled.<br>
+        Now you can see your stats while logged in.<br>
+        Guests nickname are now prefixed with "【G】"<br>
+        Even More Skins!<br>
+        <hr>
+
+        <h1>Version 3.0.0B</h1>
+        2019-07-18 - Content Patch<br>
+        <a href="https://github.com/mroyale">Our github repository is now in a new location!</a><br>
+        Now private lobby setting for guest login is separate from when you're logged in.<br>
+        Yes! More Skins!<br>
+        New world: Yoshi Island (YI)<br>
+        A server-side fix have been done to prevent the "account already in use" bug from happening.
+        <hr>
+
+        <h1>Version 3.0.0</h1>
+        2019-07-18 - Content Patch<br>
+        <span style="color: red; font-weight: bold">Every mod that redirects the lobby/menu music is now outdated, and
+          may make the game fail to function properly. These mods will need a update!</span><br>
+        Game timer and player remaining count now show properly on mobile devices.<br>
+        Skins now have unique theme musics that plays in the whole game.<br>
+        Lots of portability fixes to our website be more compatible with mobile devices.<br>
+        Now you can play with your very own acount!
+        <div class='note'>Currently this feature is in beta testing, and is not very useful at all.<br>Another thing, if
+          you have trouble with a captcha, you can cancel the register and go back to it that a new captcha will be
+          generated!</div>
+        Skin selection is now correctly backgroundless.<br>
+        A lot of new skins.<br>
+        New worlds: Special (S), Minus (M)
+        <hr>
+
+        <h1>Version 2.2.0</h1>
+        2019-07-13 - Content Patch<br>
+        Yoshi & Infringio have been added to the game as default options.<br>
+        The lobby has had an overhaul, and now has a secret area.<br>
+        <div class='note'>We added a timer to worlds and also game stats at the podium area.</div>
+        A ton of backend fixes have been made.<br>
+        The map sheet has been updated to include new themes.
+        <hr>
+
+        <div class='chng'>
+          <h1>Version 2.1.11</h1>
+          2019-07-08 - Bugfix Patch<br>
+          Yes, now we are <img src="https://i.imgur.com/37x7FpP.png" width="170" height="40" />! (never mind, we moved
+          our servers and got rid of https, we'll re-add it once we start handling passwords)<br><br>
+          Now the star power remains for a little more time after the star music finishes.<br>
+          <div class='note'>It was a disgrace to die because of an miscalculation of the star time, so we fixed it.
+          </div>
+          You can no longer get stuck in the axe section of the castles.<br><br>
+          When you're on the podium, you can now use the jump button to return to the lobby. Also works with
+          gamepad!<br><br>
+          When you're on the podium, you can now see the statistics of your performance in the match.<br>
+          <div class='note'>For now the only stats you'll see are players killed and coins collected.</div>
+          Star power now gets cancelled when you touch the flagpole.<br><br>
+          Flagpole speed has been increased.
+          <hr>
+
+          <h1>Version 2.1.10</h1>
+          2019-07-07 - Content Patch<br>
+          Now default skin is correctly using "smb_skin0.png".<br><br>
+          Added world selector (beta) with the <b>custom levels loading</b> option.<br>
+          <div class='note'>For now it is only available in solo private lobby, may not be usable in mobile phones.
+          </div>
+          Added the possibility to create your own solo private lobby.<br>
+          <div class='note'>Just open the game with private room checked but without a squad code. For now only you can
+            join this lobby as the name suggests.</div>
+          The victory royale message now uses a texture.<br><br>
+          Now the game auto recover the fullscreen mode when in mobile phones.<br><br>
+          Now the only way to start a private lobby is with votes, and it can be started with only 1 player.<br>
+          <div class='note'>This has been done due the new world selector, but may be revised if necessary.</div>
+          <hr>
+
+          <h1>Version 2.1.9</h1>
+          2019-07-05 - Content Patch<br>
+          Rudimentary skin selection added. Default options.<br><br>
+          When you die, you are automatically transferred to the lobby.<br><br>
+          "Return to lobby" button now shows properly on mobile phones in fullscreen mode.<br><br>
+          Spread the new game link as far and as wide as you can! <a
+            href="http://www.marioroyale.co.uk">http://www.marioroyale.co.uk</a>
+          <hr>
+
+          <h1>Version 2.1.8</h1>
+          Jul 04 - Content Patch<br>
+          The lobby has been updated and it's music has been changed to SMB2 Overworld Theme.<br><br>
+          Added a visible logging during game interface load process.<br><br>
+          Added button to return to lobby when you die or win.<br><br>
+          Added animation to mystery boxes! =D
+          <hr>
+
+          <h1>Version 2.1.7</h1>
+          2019-07-04 - Added a new lobby. CLEAR YOUR CACHE FOR THE NEW FILES.<br>
+          Now you can visit the edges of the lobby! This lobby will be permanent (until we decide to change it again,
+          anyway).<br><br>
+          New Golden Flower powerup added. You can see this to the left of the lobby.<br><br>
+          Various world/level fixes have been made based on bug reports. Thank you for the feedback, keep it
+          coming!<br><br>
+          Uncommon Connection Interrupted bug has been dealt with.<br><br>
+          Added new Victory music when you reach the podium and defeat Bowser.<br><br>
+          Various backend bugs have been fixed.<br><br>
+          In future updates you will no longer need to clear your cache.
+          <hr>
+
+          <h1>Version 2.1.6</h1>
+          2019-07-02 - Content Patch<br>
+          Now you can can create your own private lobby.<br>
+          <div class='note'>For now private lobbies are just squad lobbies, that is, a lobby that only players using
+            your squad code can enter.</div>
+          <hr>
+
+          <h1>Version 2.1.5b</h1>
+          2019-07-02 - Hotfix Patch<br>
+          A fix has been made to stop names from appearing when not using a squad code.
+          <hr>
+
+          <h1>Version 2.1.5</h1>
+          2019-07-02 - <b>CLEAR YOUR CACHE FOR THE NEW FILES.</b><br>
+          Map tilesheet has been updated. Worlds have been fixed to load the tilesheet properly. (If you still come
+          across bugs, report them in our discord).<br><br>
+          The apparent bug where players were unable to win after defeating Bowser has been fixed. The Podium win should
+          now trigger properly.<br><br>
+          Lobby has been adjusted to celebrate 1000 discord members! We noticed people were trying to jump out of the
+          lobby boundaries from the cloud so we replaced the lobby music with Van Halen's Jump in 8 bit. Never give up.
+          You'll reach that flower eventually.<br><br>
+          An offline level editor is now available on <a
+            href="https://github.com/minusyt23/mario-royale-maker">GitHub</a>. This editor is still a heavy W.I.P.
+          Please do give feedback/suggestions for the editor in our discord.<br><br>
+          Again, please share the game link (marioroyale.co.uk) to as many people as you can. The more players we have,
+          the more testing and bug fixes we can do for an overall better experience for everyone.
+          <hr>
+
+          <h1>Version 2.1.4</h1>
+          2019-07-01 - <b>CLEAR YOUR CACHE FOR THE NEW FILES.</b><br>
+          Gay Baby Jail has been brought back. This affects lobby hackers as well. Don't hack bro/brodette. Not
+          cool.<br><br>
+          A new map sheet has been added. Worlds 3 and 6 have been fixed accordingly. Please report any sprite bugs in
+          the discord.<br><br>
+          Lobby cap has been increased to accommodate for the new boost in player numbers.<br><br>
+          Other small various bug fixes have happened regarding the server, lobby etc.<br><br>
+          Please share the game link (marioroyale.co.uk) to as many people as you can. The more players we have, the
+          more testing and bug fixes we can do.
+          <hr>
+
+          <h1>Version 2.1.3</h1>
+          2019-06-28 - <b>CLEAR YOUR CACHE FOR THE NEW FILES.</b><br>
+          Added an arrow to the discord on the menu.<br><br>
+          Menu music & lobby music have been added & fixed.<br><br>
+          Sprites now use the original NES pallette & sprite bugs have been fixed.<br><br>
+          Other small various bug fixes have happened.<br><br>
+          Downloadable version will now be discontinued. If you already have that version, you can continue to use it,
+          but it will no longer be supported in future updates.
+          <hr>
+
+          <h1>Version 2.1.2</h1>
+          2019-06-27 - Fixed some sprite issues. Game now has a fully working online version: <a
+            href="http://77.68.80.27">http://77.68.80.27/royale/#game</a><br>
+          Fixed a problem with the controller image on the menu.<br><br>
+          Lobby fence is not coming back. If you want it back use <a
+            href="https://cdn.discordapp.com/attachments/592387457216151553/593808439717789696/fence.png">this
+            mod</a>.<br><br>
+          Despite what /v/ would have you believe, we are here to stay. Also SQD rules, but you are not forced to use
+          it.
+          <hr>
+
+          <h1>Version 2.1.1</h1>
+          2019-07-27 - Under new management.<br>
+          Game back up to latest version, minus the "improved" level editor.<br><br>
+          Removed the annoying fence in the lobby that was only in the way. Deal with it.<br><br>
+          New disclaimer added, discord link added, Menu altered & links removed and text changed for reasons.
+          <hr>
+
+          <h1>Version 1.2.4</h1>
+          2019-06-19 - Bugfix Patch<br>
+          Performance improvements<br><br>
+          Fixed some blocks in Lost - 1
+          <hr>
+
+          <h1>Version 1.2.3b</h1>
+          2019-07-19 - Hotfix Patch<br>
+          Css changes<br><br>
+          Rolling back some stuff from previous patch<br><br>
+          <hr>
+
+          <h1>Version 1.2.3</h1>
+          2019-06-19 - Bugfix Patch<br>
+          Fixed invalid object on Lost - 3<br><br>
+          Fixed some blocks and added some poison mushrooms to Plus - 2<br><br>
+          Experimental stability changes<br>
+          <div class='note'>Hopefully fixes the rare game freezes</div>
+          Fixed minor desync issue<br><br>
+          Fixed bug with simultaneous powerup and death
+          <hr>
+
+          <h1>Version 1.2.2</h1>
+          2019-06-19 - Bugfix Patch<br>
+          <span style="color: red; font-weight: bold">CLEAR YOUR BROWSER CACHE TO GET NEW FILES!</span><br>
+          <div class='note'>In most browsers it's like ctrl+shift+r or ctrl+shift+d. Ctrl+f5 may work but not always.
+          </div>
+          Stop asking me about the controls<br>
+          <div class='note'>Read the patch notes reeeeeeeeeeeee!<br>They were made rebindable 2 patches
+            ago!<br>reeeeeeeeeeeeeeeeeeeeeeeeeee!</div>
+          Added world Lost-1<br>
+          <div class='note'>So you can stop asking for it</div>
+          Reduced Pirhana Plant hitbox<br>
+          <div class='note'>Exact amount is 10% off the left and right side</div>
+          Added star kill counter<br>
+          <div class='note'>Some random anon suggested it so I threw it in</div>
+          Added cool kids room in lobby<br><br>
+          Improved control rebinding app<br>
+          <div class='note'>Fixed an issue where pressing space would retrigger the 'set' button<br>Now shows hex
+            keycodes and joycodes.</div>
+          Added poison mushrooms<br><br>
+          Minor bugfixes for desyncs and what not<br><br>
+          Added japes
+          <hr>
+
+          <h1>Version 1.2.1</h1>
+          2019-06-18 - Hotfix Patch<br>
+          Fixed spawn bug in world Plus<br><br>
+          Changed 1 koopa<br><br>
+          Removed memes
+          <hr>
+
+          <h1>Version 1.2.0</h1>
+          2019-06-18 - Content Patch<br>
+          Added world 6<br><br>
+          Added world Plus<br>
+          <div class='note'>This is a custom level I designed. Hope you guys like it.</div>
+          Added custom control rebinding<br>
+          <div class='note'>Click the controller icon on the bottom right of the main page</div>
+          Added a simple win counter<br>
+          Hammer bros are now stompable<br><br>
+          Players now gain 1.5s immunity after picking up a powerup<br><br>
+          Players are now properly intangible during various uncontrolled states<br>
+          <div class='note'>Fancy way of saying, you shouldnt get killed while on the flagpole anymore</div>
+          Fixed a random invisible flag pole in 2-3<br><br>
+          Various other small changes
+          <hr>
+
+          <h1>Version 1.1.1</h1>
+          2019-06-17 - Hotfix Patch<br>
+          Fixed World 5<br>
+          <div class='note'>File was only partially saved for some reason. I restored it.</div>
+          Sprite sheet update<br>
+          <div class='note'>Added bullet bills. You must clear your browser image cache or they will be invisible.</div>
+          <hr>
+
+          <h1>Version 1.1.0</h1>
+          2019-06-17 - Content Patch<br>
+          Added support for most mobile devices.<br>
+          <div class='note'>General touch screen support. Fairly basic right now and only tested on android chrome.
+          </div>
+          Squads<br>
+          <div class='note'>
+            Added a new feature called "Squad Code".<br>
+            If you and a friend have the same squad code you will be able to see each others names.<br>
+            This can be used with as many people as you want.<br>
+            Leaving the squad code blank will disable it.<br>
+            Have fun /v/<br>
+          </div>
+          Added World 5 to map rotation<br>
+          <div class='note'>If you thought world 3 was bad...</div>
+          General fixes and improvements<br>
+          <div class='note'>
+            This patch added a lot of new features very quickly.<br>
+            There may be some noteworthy bugs. If you find something broken tweet at me on twitter.<br>
+            Be sure to include as much information about the bug as you can. Details matter.
+          </div>
+          <hr>
+
+          <h1>Version 1.0.2b</h1>
+          2019-06-16 - Hotfix Patch<br>
+          Changed a janky value. Super minor change.
+          <hr>
+
+          <h1>Version 1.0.2</h1>
+          2019-06-16 - Bugfix Patch<br>
+          Server max lifespan changes<br>
+          <div class='note'>General server performance improvements</div>
+          Star music fixes<br>
+          <div class='note'>Star music now stops and starts properly</div>
+          Mario physics change<br>
+          <div class='note'>Mario can no longer turn around midair. This allows for reverse jumps.</div>
+          Removed accidental debug log in last patch<br>
+          Reduced coins needed for a life to 30<br>
+          <div class='note'>Getting 50 coins was nearly impossible. You now get a life at 30 coins. Better balanced.
+          </div>
+          Various small tweeks on backend<br>
+          <div class='note'>General performance and bugfixes. Should have no affect on how the game plays.</div>
+          Vinny played my game<br>
+          <div class='note'>Thank you binny. My life is now complete. <3 <3 <3</div>
+              <hr>
+
+              <h1>Version 1.0.1</h1>
+              2019-06-16 - Performance Patch<br>
+              Player count reduced to 75 from 99<br>
+              <div class='note'>
+                Both the server and the game client struggle to handle a full 99 players so I'm reducing it for now to
+                help alleviate performance issues on both the backend server and the client renderer.<br>
+                I also feel like 99 players is a bit overly chaotic right at the start, so hopefully this will make it
+                more manageable.<br>
+                After all... Most battle royales spread their players over a large area. This game dumps them all in 1
+                place.
+              </div>
+              Renderer culling changes<br>
+              <div class='note'>Small change to slightly improve framerates.</div>
+              Experimental Server Performance Improvements<br>
+              <div class='note'>Made some changes to how the server writes game data to clients. Should be thread safe
+                but may cause problems. I'll roll this back if it breaks things.</div>
+              Improved support for browsers that don't have a gamepad api<br>
+              <div class='note'>Hopefully fixes a few web browsers that like... no one uses...</div>
+              Fixed num0 key being wrong keycode<br><br>
+              Added more stuff you can't get in the lobby<br><br>
+              Planned stuff:<br>
+              <div class='note'>Hopefully will be able to add some new features soon.<br>Most requested features are:
+                touch controls, squads, and rebindable controls.<br>Please look forward to it.</div>
+              <hr>
+
+              <h1>Version 1.0</h1>
+              2019-06-15 - Initial release
+          </div>
+    </body>
+
+</html>

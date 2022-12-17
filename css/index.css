@@ -1,0 +1,1474 @@
+@font-face {
+  font-family: SmbWeb;
+  src: url('../font/smbfont.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: SmbChat;
+  src: url('../font/chatfont.ttf') format("truetype");
+}
+
+@keyframes glow {
+  to {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@-webkit-keyframes bkgScroll {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: 100% 0px;
+  }
+}
+
+@keyframes bkgScroll {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: 100% 0px;
+  }
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-animation: autofill 0s forwards;
+  animation: autofill 0s forwards;
+  border-bottom: 5px dashed green;
+  -webkit-text-fill-color: green;
+}
+
+@keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+
+@-webkit-keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+
+body {
+  display: none;
+  background-color: rgba(0, 0, 0);
+  user-select: none;
+  -moz-user-select: none;
+
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.background-a {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background-color: #14161d;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/bkga.png);
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  -webkit-animation: bkgScroll 150s linear infinite;
+  animation: bkgScroll 150s linear infinite;
+}
+
+.background-b {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background-color: #000000;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/bkgb.png);
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  -webkit-animation: bkgScroll 150s linear infinite;
+  animation: bkgScroll 150s linear infinite;
+}
+
+.background-c {
+  background-color: #000000;
+}
+
+;
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.container-center {
+  font-family: SmbWeb;
+  color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 64px;
+}
+
+@media only screen and (max-width: 769px) {
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.container-launch {
+  margin-top: 10px;
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 769px) {
+  .container-launch {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+}
+
+.container-bottom {
+  font-size: 32px;
+}
+
+.container-go {
+  font-size: 32px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 769px) {
+  .container-go {
+    font-size: 16px;
+  }
+}
+
+.launch {
+  cursor: pointer;
+  margin-left: 6px;
+
+  animation: glow 1s infinite alternate;
+}
+
+.leaderboard-select {
+  cursor: pointer;
+  margin-left: 6px;
+  display: inline-block;
+  animation: glow 1s infinite alternate;
+}
+
+.leaderboard-content {
+  color: #663500;
+  background-color: #EA9E22;
+  border-top: 6px solid #994E00;
+  border-right: 6px solid #000;
+  border-bottom: 6px solid #000;
+  border-left: 6px solid #994E00;
+}
+
+@media only screen and (max-width: 769px) {
+  .launch {
+    margin-left: 2px;
+  }
+}
+
+.private {
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 6px;
+  float: right;
+
+  animation: 1s infinite alternate;
+}
+
+@media only screen and (max-width: 769px) {
+  .private {
+    font-size: 12px;
+  }
+}
+
+.launch:hover {
+  animation: none;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.launchStrong:hover {
+  animation: none;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.launchStrong {
+  cursor: pointer;
+  font-size: 32px;
+  font-family: SmbWeb;
+  background: none;
+  border: none;
+  color: white;
+  animation: glow 1s infinite alternate;
+}
+
+@media only screen and (max-width: 769px) {
+  .launchStrong {
+    font-size: 16px;
+  }
+}
+
+.players {
+  font-size: 20px;
+  margin-right: 4px;
+  float: right;
+}
+
+.player-number {
+  color: #00FF00;
+}
+
+.player-maintenance {
+  font-size: 20px;
+  margin-right: 4px;
+  float: right;
+  color: #FF0000;
+}
+
+@media only screen and (max-width: 769px) {
+  .players {
+    font-size: 16px;
+  }
+}
+
+.name-input {
+  font-family: SmbWeb;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  border-bottom: 5px dashed #FFFFFF;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.name-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 769px) {
+  .name-input {
+    font-size: 20px;
+  }
+}
+
+.captcha-input {
+  font-family: SmbWeb;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+
+  width: 480px;
+  background: transparent;
+  border: none;
+  border-bottom: 5px dashed #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.captcha-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 769px) {
+  .captcha-input {
+    font-size: 20px;
+    width: 180px;
+  }
+}
+
+.team-input {
+  font-family: SmbWeb;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  border-bottom: 5px dashed #FFFFFF;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.team-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 769px) {
+  .team-input {
+    font-size: 12px;
+  }
+}
+
+hr {
+  border: 2px dashed whitesmoke;
+}
+
+.password-input {
+  font-family: SmbWeb;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  border-bottom: 5px dashed #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.password-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 769px) {
+  .password-input {
+    font-size: 20px;
+  }
+}
+
+.dis-lg {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.dis-sm {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 8px;
+  white-space: normal;
+}
+
+.dis-sm-r {
+  font-size: 12px;
+  text-align: right;
+}
+
+@media only screen and (max-width: 769px) {
+  .dis-lg {
+    font-size: 8px;
+    margin-bottom: 8px;
+    white-space: normal;
+  }
+
+  .dis-sm {
+    font-size: 4px;
+    white-space: normal;
+  }
+}
+
+.warn {
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 32px 2px 4px;
+  font-family: "Calibri", monospace;
+  color: rgba(255, 255, 255, 1.0);
+  background-color: rgba(0, 0, 0, 0.25);
+
+  font-size: 16px;
+}
+
+.warn-ico {
+  height: 16px;
+  margin-bottom: -2px;
+  margin-right: 2px;
+}
+
+.error {
+  font-size: 32px;
+}
+
+.fullscreen {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+#log {
+  font-family: SmbWeb;
+  font-size: 32px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: table;
+  text-align: center;
+}
+
+#log>.debugLog {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.leaderboard-skin {
+  text-align: left;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 12px;
+  background: url(https://raw.githubusercontent.com/mroyale/assets/master/img/skins/smb_skin0.png) -208px 0;
+  transform: scale(2)
+}
+
+.skin-select-button {
+  text-align: left;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 12px;
+  border: 2px solid #3c3c3c;
+  background: url(https://raw.githubusercontent.com/mroyale/assets/master/img/skins/smb_skin0.png) -208px 0;
+  transform: scale(2)
+}
+
+.skin-select {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1250px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0, 0)
+}
+
+@media only screen and (max-width: 769px) {
+  .skin-select {
+    margin-top: 20px;
+    transform: scale(1)
+  }
+}
+
+.container-return {
+  font-family: SmbWeb;
+  font-size: 32px;
+  color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-90%);
+  white-space: nowrap;
+}
+
+.container-gameChat {
+  position: absolute;
+  font-family: SmbWeb;
+  width: 50vh;
+  height: 45vh;
+  background-color: #00000080;
+  transform: translateX(5%) translateY(110%);
+
+  top: 0%;
+  left: 0%;
+
+  background-image: none;
+  border-radius: 10px;
+  border: 4px white solid;
+  overflow-x: clip;
+  overflow-y: hidden;
+  color: #FFFFFF;
+}
+
+.container-hideChat {
+  position: absolute;
+  display: block;
+  margin-top: -12%;
+  margin-left: 93%;
+}
+
+.container-hiddenChat {
+  width: 20vh;
+  height: 5vh;
+  transform: translateX(5%) translateY(90vh);
+}
+
+.container-chatTab {
+  display:inline-flex;
+  margin-left: -12%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.container-chatInput {
+  width: 98%;
+  transform: translateX(-12.5%) translateY(28vh);
+  height: 3vh;
+  background-color: rgba(0, 0, 0, 0.565);
+  border-radius: 7px;
+  font-family: SmbChat;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.container-chatMessages {
+  height: 27vh;
+  font-family: 'SmbChat';
+  margin-top: -5vh;
+  margin-left: .5vh;
+  margin-right: .5vh;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.container-privLobby {
+  font-family: SmbWeb;
+  color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: black;
+
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  border: 8px solid #000;
+  background-color: #994E00;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV8/pCIVETtIEclQnSyIioiTVLEIFkpboVUHk0u/oElDkuLiKLgWHPxYrDq4OOvq4CoIgh8gjk5Oii5S4v+SQosYD4778e7e4+4d4G1UmGL4xwFFNfVUPCZkc6tC4BV+DKMfYcyKzNAS6cUMXMfXPTx8vYvyLPdzf45eOW8wwCMQzzFNN4k3iKc3TY3zPnGIlUSZ+Jx4TKcLEj9yXXL4jXPRZi/PDOmZ1DxxiFgodrDUwaykK8RTxBFZUSnfm3VY5rzFWanUWOue/IXBvLqS5jrNIcSxhASSECChhjIqMBGlVSXFQIr2Yy7+sO1PkksiVxmMHAuoQoFo+8H/4He3RmFywkkKxoCuF8v6GAECu0Czblnfx5bVPAF8z8CV2vZXG8DMJ+n1thY5Avq2gYvrtibtAZc7wOCTJuqiLfloegsF4P2MvikHDNwCPWtOb619nD4AGepq+QY4OARGi5S97vLu7s7e/j3T6u8H4HVy047HNnMAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBB4TKibqiYCvAAAAJ0lEQVQ4y2NgwA/+E5JnYqAQUGwAIxHOJAn8J1V+GIbBaDoYmekAADEeDAm6TpGEAAAAAElFTkSuQmCC);
+  image-rendering: pixelated;
+  background-size: 48px 48px;
+}
+
+.container-privLobby-box {
+  font-size: 14px;
+  color: #663500;
+  background-color: #EA9E22;
+  border-top: 6px solid #994E00;
+  border-right: 6px solid #000;
+  border-bottom: 6px solid #000;
+  border-left: 6px solid #994E00;
+}
+
+.container-devConsole {
+  font-family: SmbWeb;
+  color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: black;
+
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  white-space: nowrap;
+}
+
+.container-statsBar {
+  font-family: SmbWeb;
+  color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: black;
+
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+}
+
+.devConsole-name-input {
+  font-family: SmbWeb;
+  color: white;
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #FFFFFF;
+}
+
+.levelSelectButton {
+  display: inline-block;
+  margin: 2px 2px 2px 2px;
+  padding: 2px 2px 2px 2px;
+  border: 2px solid #EA9E22;
+}
+
+.levelSelectRow {
+  text-align: center;
+  margin: 2px;
+}
+
+.login-result {
+  position: absolute;
+  padding: 5px 32px 2px 32px;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  background-color: rgba(255, 255, 255, 0.39);
+
+  font-family: SmbWeb;
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 769px) {
+  .login-result {
+    font-size: 12px;
+  }
+}
+
+.pagination {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination,
+.pagination * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pagination a {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.pagination a.disabled {
+  opacity: .3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.pagination a.current {
+  color: black;
+}
+
+.char-music-toggle.enabled {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background-size: 100%;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/char-music-enabled.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .char-music-toggle.enabled {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+.char-music-toggle.disabled {
+  float: right;
+  width: 32px;
+  height: 32px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/char-music-disabled.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .char-music-toggle.disabled {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+.private-toggle.enabled {
+  float: right;
+  width: 26px;
+  height: 32px;
+  background-size: 100% 100%;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/locked.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .private-toggle.enabled {
+    width: 13px !important;
+    height: 16px !important;
+  }
+}
+
+.private-toggle.disabled {
+  float: right;
+  width: 26px;
+  height: 32px;
+  background-size: 100% 100%;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/unlocked.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .private-toggle.disabled {
+    width: 13px !important;
+    height: 16px !important;
+  }
+}
+
+.gm-change.vanilla {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background-size: 100%;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/gm0.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .gm-change.vanilla {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+.gm-change.pvp {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background-size: 100%;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/gm1.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .gm-change.pvp {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+.gm-change.hell {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background-size: 100%;
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/gm2.png');
+}
+
+@media only screen and (max-width: 769px) {
+  .gm-change.hell {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 110%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Loading spinner */
+#loader {
+  animation: spin 1s linear infinite;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px;
+}
+
+@keyframes spin {
+  0% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  6.25% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  12.5% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  18.75% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  25% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  31.25% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  37.5% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+
+  43.75% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px #FFFFFF,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px transparent;
+  }
+
+  50% {
+    box-shadow:
+      0px -30px transparent,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px #FFFFFF,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  56.25% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px transparent,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px #FFFFFF,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  62.5% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px transparent,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px #FFFFFF,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  68.75% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px transparent,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px #FFFFFF,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  75% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px transparent,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px #FFFFFF,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  81.25% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px transparent,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px #FFFFFF,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  87.5% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px transparent,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px #FFFFFF,
+      -10px -30px #FFFFFF;
+  }
+
+  93.75% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px transparent,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px #FFFFFF;
+  }
+
+  100% {
+    box-shadow:
+      0px -30px #FFFFFF,
+      10px -30px #FFFFFF,
+      20px -20px #FFFFFF,
+      30px -10px #FFFFFF,
+      30px 0px #FFFFFF,
+      30px 10px #FFFFFF,
+      20px 20px #FFFFFF,
+      10px 30px #FFFFFF,
+      0px 30px transparent,
+      -10px 30px transparent,
+      -20px 20px transparent,
+      -30px 10px transparent,
+      -30px 0px transparent,
+      -30px -10px transparent,
+      -20px -20px transparent,
+      -10px -30px transparent;
+  }
+}
+
+/* Links */
+.link-r {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.link-git {
+  cursor: pointer;
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/git.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px 64px;
+}
+
+.link-git:hover {
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/git-inv.png);
+}
+
+.link-disc {
+  cursor: pointer;
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/disc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 72px 72px;
+}
+
+.link-disc:hover {
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/disc-inv.png);
+}
+
+.link-twit {
+  cursor: pointer;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/twit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+}
+
+.link-twit:hover {
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/twit-inv.png);
+}
+
+.link-patr {
+  cursor: pointer;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/img/home/patr.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+}
+
+.link-patr:hover {
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/img/home/patr-inv.png);
+}
+
+.link-l {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.link-patch {
+  font-family: SmbWeb;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.link-patch:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.link-leaderboard {
+  font-family: SmbWeb;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.link-leaderboard:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.link-b {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.link-editor {
+  cursor: pointer;
+  display: inline-block;
+  width: 36px;
+  height: 27px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/warn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 27px;
+  margin-bottom: 1px;
+  vertical-align: top;
+}
+
+.link-con {
+  cursor: pointer;
+  display: inline-block;
+  width: 36px;
+  height: 25px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/input.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+  margin-right: 6px;
+  vertical-align: top;
+}
+
+.link-con:hover {
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/con-inv.png);
+}
+
+.link-w {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -2;
+  padding-top: 10px;
+}
+
+.link-s {
+  position: absolute;
+  bottom: 9px;
+  left: 0px;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.link-leaderboard {
+  cursor: pointer;
+  display: inline-block;
+  margin: 4px;
+  font-family: SmbWeb;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  margin-left: 12px;
+}
+
+.win {
+  display: inline-block;
+  margin: 6px;
+  font-family: SmbWeb;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  margin-left: 12px;
+}
+
+.kill {
+  font-size: 18px;
+}
+
+.rtfpn {
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  width: 844px;
+  height: 378px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 844px 378px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 769px) {
+  .rtfpn {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.rtfpn2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 844px;
+  height: 378px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 844px 378px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 769px) {
+  .rtfpn2 {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .rtfpn2 {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.rtfpn3 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 844px;
+  height: 378px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 844px 378px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 769px) {
+  .rtfpn3 {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .rtfpn3 {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.rtfpn4 {
+  position: absolute;
+  bottom: 9px;
+  left: 0px;
+  width: 844px;
+  height: 378px;
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 844px 378px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 769px) {
+  .rtfpn4 {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .rtfpn4 {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .link-patch {
+    font-size: 12px;
+  }
+}

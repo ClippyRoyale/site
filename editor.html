@@ -1,0 +1,498 @@
+<html lang="en-US">
+  <head>
+
+    <title>Editor - Mario Royale</title>
+    <meta name="og:title" content="Mario Royale Editor" />
+    <meta property="og:title" content="Mario Royale Editor" />
+    <meta name="twitter:title" content="Mario Royale Editor" />
+
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="keywords" content="MRoyale, Mario, Mario Royale, Royale, Super Mario, Super Mario Bros., Super Mario Bros. Royale, Super Mario Royale" />
+    <meta name="description" content="The map editor for Mario Royale, a competitive online battle where up to 99 players compete for glory!" />
+    <meta name="og:description" content="The map editor for Mario Royale, a competitive online battle where up to 99 players compete for glory!" />
+    <meta property="og:description" content="The map editor for Mario Royale, a competitive online battle where up to 99 players compete for glory!" />
+    <meta name="twitter:description" content="The map editor for Mario Royale, a competitive online battle where up to 99 players compete for glory!" />
+
+    <link rel='icon' href='https://raw.githubusercontent.com/mroyale/assets/master/img/home/icon.ico'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/mroyale/assets/master/img/home/icon.ico" />
+    <link rel="apple-touch-icon" sizes="192x192" href="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+    <meta name="og:image" content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta name="theme-color" content="#FFA441" />
+    <meta name="msapplication-navbutton-color" content="#FFA441">
+    <meta name="twitter:widgets:link-color" content="#FFA441">
+    <meta name="twitter:widgets:border-color" content="#FFA441">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="HandheldFriendly" content="true">
+
+    <link rel="canonical" href="https://marioroyale.tk/" />
+    <meta name="og:url" content="https://marioroyale.tk/" />
+    <meta property="og:url" content="https://marioroyale.tk/" />
+
+    <meta name="og:site_name" content="Mario Royale" />
+    <meta property="og:site_name" content="Mario Royale" />
+
+    <meta name="og:type" content="website" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@MRoyalePlus" />
+
+    <link rel='stylesheet' type='text/css' href='css/editor.css?v=4.3.2.1'>
+    </head>
+    
+    <body id='body' style='display: none'>
+      <!-- Warning -->
+      <div id='warn' class='warn' style='display:none'></div>
+      
+      <!-- Error -->
+      <div id='error' class='container-center' style='display:none'>
+        <div id ='error-message' class='error'></div>
+      </div>
+
+      <!-- Settings -->
+      <div id='settings' class='container-privLobby' style='display:none'>
+        <span style="float:right;" id="settingsExit">[X]</span>
+        <br>
+        <h2 style="margin-top: 0;margin-left: 5px;margin-bottom: 15px;">Theme</h2>
+        &nbsp;<input type="radio" id="light" name="theme">
+        <label for="light">Light</label><br>
+        &nbsp;<input type="radio" id="dark" name="theme">
+        <label for="dark">Dark</label><br>
+      </div>
+      
+      <!-- File -->
+      <div id="file" style='display:none'>
+        <span id='file-new' class="tool-button">New Empty Level...</span><br><br>
+        <b>Open Game File...</b>
+        <div><input type="file" id="file-input" accept=".json,.txt"/></div><br>
+        <div class="file-error" id="file-error">...</div>
+          You can download and open any of these existing worlds by clicking on the hyperlinks:
+          <ul>
+            <li><a href="https://raw.githubusercontent.com/mroyale/assets/master/worlds/royale/world-1.json" download>world-1.json</a></li>
+            <li><a href="https://raw.githubusercontent.com/mroyale/assets/master/worlds/royale/world-l1.json" download>world-l1.json</a></li>
+            <li><a href="https://raw.githubusercontent.com/mroyale/assets/master/worlds/royale/world-p.json" download>world-p.json</a></li>
+            <li><a href="https://raw.githubusercontent.com/mroyale/assets/master/worlds/royale/world-special.json" download>world-special.json</a></li>
+        </ul>
+          You can also press the “New Empty Level” button to create a new blank level or check out the <a href="https://github.com/mroyale/assets/tree/master/worlds">GitHub repository</a> with all the worlds.<br>
+          This EK is intended for those somewhat knowledgeable of programming/modding.<br>
+          All values listed as “byte” or “bit” are in unsigned decimal format.<br>
+          Which means a byte is a value from 0 to 255 and so on.<br><br>
+          All zones should have a height of 16. This is a general style rule for the game.<br>
+          If you plan to try and make a map, please study the existing maps carefully!<br><br>
+          If you manage to make a level that looks solid, you can share it in <a href="https://discord.gg/kV72ezsQwt">our Discord server</a>!<br>
+          We will only be adding the W. Remember to save often and good luck!
+      </div>
+      
+      <!-- Editor -->
+      <div id='editor' class="box" style='display:none'>
+        <div id='editor-top' class="row header panel-top unselectable">
+          <span id='editor-top-world' class="toolbar-button-top left">World</span>
+          <span id='editor-top-level' class="toolbar-button-top left">Level</span>
+          <span id='editor-top-zone' class="toolbar-button-top left">Zone</span>
+          <span id='editor-top-tile' class="toolbar-button-top left">Tile</span>
+          <span id='editor-top-object' class="toolbar-button-top left">Object</span>
+          <span id='editor-top-warp' class="toolbar-button-top left">Warp</span>
+          <span id='editor-top-copy' class="toolbar-button-top left">Clone</span>
+          <span id='editor-top-rep' class="toolbar-button-top left">Replace</span>
+          <span id='editor-top-ref' class="toolbar-button-top left">Reference</span>
+          <span id='editor-top-background' class="toolbar-button-top left">Background</span>
+          <span id='editor-top-guide' class="toolbar-button-top right">Guide</span>
+          <span id='editor-top-about' class="toolbar-button-top right">About</span>
+          <span id='editor-top-save' class="toolbar-button-top right">Save</span>
+        </div>
+        <div id='editor-middle' class="row content">
+            <div id='editor-list' class="panel-right">
+            </div>
+            <div id='editor-display' class='panel-left unselectable' oncontextmenu="return false">
+              <canvas id="editor-display-canvas" width="320" height="240">
+                Your browser doesn’t appear to support the <code>&lt;canvas&gt;</code> element.
+              </canvas>
+            </div>
+        </div>
+        <div id='editor-bottom' class="row footer">
+
+          <!-- Background Tool -->
+          <div id='editor-tool-background' class='tool-container' style='display: none;'>
+            <div class='tool-box'>
+              <div class='tool-var'>Initial Sprite Index</div><div class='tool-type'>11-bit int</div>
+              <input id='editor-tool-background-initial' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Horizontal Length</div><div class='tool-type'>16-bit int</div>
+              <input id='editor-tool-background-columns' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Vertical Length</div><div class='tool-type'>16-bit int</div>
+              <input id='editor-tool-background-rows' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Layer</div><div class='tool-type'>signed int</div>
+              <input id='editor-tool-background-layer' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>X Offset</div><div class='tool-type'>16-bit int</div>
+              <input id='editor-tool-background-xoff' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Y Offset</div><div class='tool-type'>16-bit int</div>
+              <input id='editor-tool-background-yoff' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div id='editor-tool-background-generate' class="tool-button">Generate</div>
+            </div>
+            <br>
+            <div class='tool-box' style='font-size: 80%'>
+              <div>This is a rudimentary tool developed to help making backgrounds a bit easier.</div>
+              <div>Press P to activate Preview Mode.</div>
+              <div>Initial Sprite Index is the sprite of the first block placed. The sprite increments by one for every block placed horizontally.</div>
+              <div>Horizontal Length is how many blocks are placed horizontally.</div>
+              <div>Vertical Length is how many blocks are placed vertically, starting from the top.</div>
+              <div>Layer, is the layer used to place the blocks on. Defaults to 0.</div>
+              <div>X Offset is the horizontal offset of the blocks placed. 1 is one tile, 2 is two tiles, etc..</div>
+              <div>Y Offset is the vertical offset, same principle. 1 is one tile, etc..</div>
+            </div>
+          </div>
+
+          <!-- World Tool -->
+          <div id='editor-tool-world' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>Initial Level</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-world-initial' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Short Name</div><div class='tool-type'>string</div>
+              <input id='editor-tool-world-shortname' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Music Path</div><div class='tool-type'>string path</div>
+              <input id='editor-tool-world-musicPath' type='text' class='tool-val'/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>SFX Path</div><div class='tool-type'>string path</div>
+              <input id='editor-tool-world-soundPath' type='text' class='tool-val'/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Assets Path</div><div class="tool-type">string path/URL</div>
+              <input id="editor-tool-world-assets" type="text" class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div id='editor-tool-world-new' class="tool-button">New Level</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-world-apply' class="tool-button">Apply</div>
+            </div>
+            <br>
+            <div class='tool-box' style='font-size: 80%'>
+              <div>Initial Level is the level the player first starts on, this should always be 0.</div>
+              <div>Short Name is used for the worlds that appear in the level selector.</div>
+              <div>Music Path is the music directory used, use the <a href="https://raw.githubusercontent.com/mroyale/assets">GitHub</a> for reference. For example, to use the Pastel music, use pastel/music, for sound effects do pastel/sfx.</div>
+              <div>Like Music Path, Sound Path is the sound effect directory. Same rules apply.</div>
+              <div>Assets Path is used for tile animations. You can paste a link to a JSON that follows the schema, or use the GitHub and use the filename of the assets file.</div>
+            </div>
+          </div>
+          
+          <!-- Level Tool -->
+          <div id='editor-tool-level' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>ID</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-level-id' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Name</div><div class='tool-type'>string</div>
+              <input id='editor-tool-level-name' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Initial Zone</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-level-initial' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div id='editor-tool-level-new' class="tool-button">New Zone</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-level-apply' class="tool-button">Apply</div>
+            </div>
+            <br>
+            <div class='tool-box' style='font-size: 80%'>
+              <div>ID is the level's ID. Make sure that no more than 1 level has the same ID.</div>
+              <div>Name is the name of the level. You can see this when entering the level.</div>
+              <div>Initial Zone is the zone the player starts in, this should always be 0.</div>
+            </div>
+          </div>
+          
+          <!-- Zone Tool -->
+          <div id='editor-tool-zone' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>ID</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-zone-id' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Initial Position X</div><div class='tool-type'>short</div>
+              <input id='editor-tool-zone-initial-x' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Initial Position Y</div><div class='tool-type'>short</div>
+              <input id='editor-tool-zone-initial-y' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Level End Move Distance</div><div class='tool-type'>int</div>
+              <input id='editor-tool-zone-level-offset' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Color</div><div class='tool-type'>HTML color</div>
+              <input id='editor-tool-zone-color' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Music</div><div class='tool-type'>string path</div>
+              <input id='editor-tool-zone-music' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Flagpole Music</div><div class='tool-type'>string path (opt)</div>
+              <input id='editor-tool-zone-winmusic' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Victory Music</div><div class='tool-type'>string path (opt)</div>
+              <input id='editor-tool-zone-victorymusic' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Width</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-zone-width' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Height</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-zone-height' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-resize' class="tool-button">Resize</div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-shiftx' class="tool-button">Shift X</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-unshiftx' class="tool-button">Unshift X</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-shifty' class="tool-button">Shift Y</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-unshifty' class="tool-button">Unshift Y</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-addlayer' class="tool-button">Add Layer</div>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-dellayer' class="tool-button">Delete Layer</div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div id='editor-tool-zone-apply' class="tool-button">Apply</div>
+            </div>
+          </div>
+          
+          <!-- Tile Tool -->
+          <div id='editor-tool-tile' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>Tile Data</div><div class='tool-type'>td32</div>
+              <div id='editor-tool-tile-raw' class="tool-val-im" style="user-select:text;"></div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Sprite Index</div><div class='tool-type'>11-bit int</div>
+              <input id='editor-tool-tile-index' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Bump State</div><div class='tool-type'>4-bit int</div>
+              <input id='editor-tool-tile-bump' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Depth</div><div class='tool-type'>1 bit</div>
+              <input id='editor-tool-tile-depth' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Tile Definition</div><div class='tool-type'>byte</div>
+              <select id='editor-tool-tile-def' class="tool-val"></select>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-tile-data-name' class='tool-var'>Extra Data</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-tile-data' type='text' class="tool-val"/>
+              <select id='editor-tool-tile-data-objid' class="tool-val"></select>
+              <select id='editor-tool-tile-data-warpid' class="tool-val">
+                <option value="0">-- Select a Warp ID --</option>
+              </select>
+            </div>
+            <div class='tool-box'>
+              <div id="editor-tool-tile-brush-change-warning" class='tool-warning' style="display:none">Modified tile not placed!</div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box' style='font-size: 80%'>
+              <div>Press P to activate preview mode.</div>
+              <div>Middle-click copies a tile’s data, left-click paints.</div>
+              <div>Sprite index defines the visual of the tile.</div>
+              <div>Bump state should always be 0 unless you have some insane reason.</div>
+              <div>Depth 0 is background, Depth 1 is foreground. Warp pipes and item blocks should generally be foreground.</div>
+              <div>Tile definition defines the physical/interactive properties of a tile. Solid ground is 1, item block is 17, etc.</div>
+              <div>Some blocks need extra data to function. For example, an item block needs the extra data 81 to put a mushroom in it.</div>
+            </div>
+          </div>
+          
+          <!-- Object Tool -->
+          <div id='editor-tool-object' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>Type</div><div class='tool-type'>byte</div>
+              <select id='editor-tool-object-type' class="tool-val"></select>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Position</div><div class='tool-type'>shor2</div>
+              <div id='editor-tool-object-pos' class="tool-val-im"></div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box' id='editor-tool-object-params'></div>
+            <div class='tool-div'></div>
+            <div class='tool-box' style='font-size: 80%'>
+              <div>Press P to activate preview mode.</div>
+              <div>Left-click selects, middle-click creates new, WASD keys to move, delete to delete.</div>
+              <div class="tool-val-im" id='editor-tool-object-info'></div>
+            </div>
+          </div>
+            
+          <!-- Warp Tool -->
+          <div id='editor-tool-warp' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>ID</div><div class='tool-type'>byte</div>
+              <input id='editor-tool-warp-id' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Position</div><div class='tool-type'>shor2</div>
+              <div id='editor-tool-warp-pos' class="tool-val-im"></div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Extra Data</div><div class='tool-type'>byte</div>
+              <!--<input id='editor-tool-warp-data' type='text' class="tool-val"/>-->
+              <select class="tool-val" id="editor-tool-warp-data">
+                <option value="0">0 - Default</option>
+                <option value="1">1 - Up</option>
+                <option value="2">2 - Down</option>
+                <option value="3">3 - Left</option>
+                <option value="4">4 - Right</option>
+                <option value="5">5 - Up (no offset)</option>
+                <option value="6">6 - Down (no offset)</option>
+              </select>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box' style='font-size: 80%'>
+              <div>Press P to activate preview mode.</div>
+              <div>Left-click selects, middle-click creates a new warp, WASD keys to move, delete to delete.</div>
+              <div>For tiles that have a warp, the extra data of that tile should match the ID of the warp point.</div>
+              <div>For example, a warp pipe with extra data 32 will warp to the warp point in that level with the ID 32.</div>
+              <div>The extra data of the warp point defines the animation state.</div>
+              <div>0 is default. 1, 2, 3, and 4 are warp pipe up, down, left and right respectively.</div>
+              <div>You can also use 5 and 6 to use up and down respectively without the player being offset by half a tile.</div>
+            </div>
+          </div>
+          
+          <!-- Copy Tool -->
+          <div id='editor-tool-copy' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>Copy Data</div><div class='tool-type'>td32</div>
+              <div id='editor-tool-copy-raw' class="tool-val-im"></div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Width</div><div class='tool-type'>int</div>
+              <input id='editor-tool-copy-width' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Height</div><div class='tool-type'>int</div>
+              <input id='editor-tool-copy-height' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Overwrite</div><div class='tool-type'>td32</div>
+              <input id='editor-tool-copy-over' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div>Middle-click to copy an area, left-click to paste.</div>
+              <div>Pasting will only overwrite tiles with the given overwrite value if it’s not empty.</div>
+              <div>The default td32 value for AIR is 30, so overwrite should generally be set to 30.</div>
+            </div>
+          </div>
+          
+          <!-- Rep Tool -->
+          <div id='editor-tool-rep' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>Target</div><div class='tool-type'>td32</div>
+              <input id='editor-tool-rep-target' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Replacement</div><div class='tool-type'>td32</div>
+              <input id='editor-tool-rep-replace' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div id='editor-tool-rep-apply' class="tool-button">Apply</div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div>Replaces all tiles that match the td32 of “target” with “replacement”.</div>
+            </div>
+          </div>
+          
+          <!-- Ref Tool -->
+          <div id='editor-tool-ref' class='tool-container' style='display: none'>
+            <div class='tool-box'>
+              <div class='tool-var'>Image</div><div class='tool-type'>string URL</div>
+              <input id='editor-tool-ref-img' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-ref-load' class="tool-button">Load</div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div class='tool-var'>Offset X</div><div class='tool-type'>int px</div>
+              <input id='editor-tool-ref-x' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div class='tool-var'>Offset Y</div><div class='tool-type'>int px</div>
+              <input id='editor-tool-ref-y' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box' style='display:none;'>
+              <div class='tool-var'>Image Opacity</div><div class='tool-type'>float int</div>
+              <input id='editor-tool-ref-opacity' type='text' class="tool-val"/>
+            </div>
+            <div class='tool-box'>
+              <div id='editor-tool-ref-apply' class="tool-button">Apply</div>
+            </div>
+            <div class='tool-div'></div>
+            <div class='tool-box'>
+              <div>Press G to show or hide the reference image.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Libs -->
+      <script src='js/lib/jquery/jquery-3.6.0.min.js?v=4.4.1'></script>
+      <script src='js/lib/cookie/js.cookie.min.js?v=4.4.1'></script>
+      
+      <!-- Core -->
+      <script src='js/editor.js?v=4.4.1'></script>
+
+    </body>
+</html>

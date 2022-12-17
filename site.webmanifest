@@ -1,0 +1,19 @@
+{
+    "name": "Mario Royale",
+    "short_name": "Mario Royale",
+    "icons": [
+        {
+            "src": "https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/mroyale/assets/master/img/home/android-chrome-550x550.png",
+            "sizes": "550x550",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#396B7F",
+    "background_color": "#396B7F",
+    "display": "standalone"
+}
