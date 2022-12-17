@@ -1,5 +1,5 @@
-const ASSETS_URL = "https://raw.githubusercontent.com/mroyale/assets/master/";
-const ASSETS_SKIN_URL = "https://raw.githubusercontent.com/mroyale/assets/master/img/skins/smb_skin";
+const ASSETS_URL = "https://raw.githubusercontent.com/mroyale/assets/legacy/";
+const ASSETS_SKIN_URL = "https://raw.githubusercontent.com/mroyale/assets/legacy/img/skins/smb_skin";
 
 let LOBBY_MUSIC_URL = ASSETS_URL + "audio/music/lobby.mp3";
 let MENU_MUSIC_URL = ASSETS_URL + "audio/music/menu.mp3";

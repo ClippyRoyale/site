@@ -262,7 +262,7 @@ var VERSION = (function() {
 })();
 
 var scripts = {
-    "jsons": ["https://raw.githubusercontent.com/mroyale/assets/master/assets/assets.json"],
+    "jsons": ["https://raw.githubusercontent.com/mroyale/assets/legacy/assets/assets.json"],
     "app": ["js/url.js", "js/game.js"],
     "objects": ["js/scripts/plant.js", "js/scripts/firebar.js", "js/scripts/fireball.js", "js/scripts/spiny.js", "js/scripts/beetle.js"]
 }

@@ -2626,7 +2626,7 @@ ShopScreen.prototype.show = function() {
             var elem = document.createElement("div");
             elem.setAttribute("class", "skin-select-button");
             elem.setAttribute("id", 'shop-' + skin.id);
-            elem.style["background-image"] = "url('https://raw.githubusercontent.com/mroyale/assets/master/img/skins/smb_skin" + skin.id +".png')";
+            elem.style["background-image"] = "url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/skins/smb_skin" + skin.id +".png')";
             elem.addEventListener("click", (function(a){return function() { ShopScreen.prototype.select(a); }; } ) (skin.id));
             document.getElementById('shop-select').appendChild(elem);
         }

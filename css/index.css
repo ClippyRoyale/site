@@ -78,7 +78,7 @@ body {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   background-color: #14161d;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/bkga.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/bkga.png);
   background-repeat: repeat-x;
   background-position: center center;
   background-attachment: fixed;
@@ -92,7 +92,7 @@ body {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   background-color: #000000;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/bkgb.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/bkgb.png);
   background-repeat: repeat-x;
   background-position: center center;
   background-attachment: fixed;
@@ -436,7 +436,7 @@ hr {
   width: 16px;
   height: 16px;
   margin: 12px;
-  background: url(https://raw.githubusercontent.com/mroyale/assets/master/img/skins/smb_skin0.png) -208px 0;
+  background: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/skins/smb_skin0.png) -208px 0;
   transform: scale(2)
 }
 
@@ -447,7 +447,7 @@ hr {
   height: 16px;
   margin: 12px;
   border: 2px solid #3c3c3c;
-  background: url(https://raw.githubusercontent.com/mroyale/assets/master/img/skins/smb_skin0.png) -208px 0;
+  background: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/skins/smb_skin0.png) -208px 0;
   transform: scale(2)
 }
 
@@ -679,7 +679,7 @@ hr {
   width: 32px;
   height: 32px;
   background-size: 100%;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/char-music-enabled.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/char-music-enabled.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -697,7 +697,7 @@ hr {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/char-music-disabled.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/char-music-disabled.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -712,7 +712,7 @@ hr {
   width: 26px;
   height: 32px;
   background-size: 100% 100%;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/locked.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/locked.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -727,7 +727,7 @@ hr {
   width: 26px;
   height: 32px;
   background-size: 100% 100%;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/unlocked.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/unlocked.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -742,7 +742,7 @@ hr {
   width: 32px;
   height: 32px;
   background-size: 100%;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/gm0.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/gm0.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -757,7 +757,7 @@ hr {
   width: 32px;
   height: 32px;
   background-size: 100%;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/gm1.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/gm1.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -772,7 +772,7 @@ hr {
   width: 32px;
   height: 32px;
   background-size: 100%;
-  background-image: url('https://raw.githubusercontent.com/mroyale/assets/master/img/home/gm2.png');
+  background-image: url('https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/gm2.png');
 }
 
 @media only screen and (max-width: 769px) {
@@ -1180,14 +1180,14 @@ hr {
   display: inline-block;
   width: 72px;
   height: 72px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/git.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/git.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 64px 64px;
 }
 
 .link-git:hover {
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/git-inv.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/git-inv.png);
 }
 
 .link-disc {
@@ -1195,14 +1195,14 @@ hr {
   display: inline-block;
   width: 72px;
   height: 72px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/disc.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/disc.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 72px 72px;
 }
 
 .link-disc:hover {
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/disc-inv.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/disc-inv.png);
 }
 
 .link-twit {
@@ -1210,14 +1210,14 @@ hr {
   display: inline-block;
   width: 36px;
   height: 36px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/twit.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/twit.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 36px 36px;
 }
 
 .link-twit:hover {
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/twit-inv.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/twit-inv.png);
 }
 
 .link-patr {
@@ -1286,7 +1286,7 @@ hr {
   display: inline-block;
   width: 36px;
   height: 27px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/warn.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/warn.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px 27px;
@@ -1299,7 +1299,7 @@ hr {
   display: inline-block;
   width: 36px;
   height: 25px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/input.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/input.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 36px 36px;
@@ -1308,7 +1308,7 @@ hr {
 }
 
 .link-con:hover {
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/con-inv.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/con-inv.png);
 }
 
 .link-w {
@@ -1365,7 +1365,7 @@ hr {
   right: 0px;
   width: 844px;
   height: 378px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/rtfpn.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 844px 378px;
@@ -1386,7 +1386,7 @@ hr {
   left: 0px;
   width: 844px;
   height: 378px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn2.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/rtfpn2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 844px 378px;
@@ -1415,7 +1415,7 @@ hr {
   right: 0px;
   width: 844px;
   height: 378px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn3.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/rtfpn3.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 844px 378px;
@@ -1444,7 +1444,7 @@ hr {
   left: 0px;
   width: 844px;
   height: 378px;
-  background-image: url(https://raw.githubusercontent.com/mroyale/assets/master/img/home/rtfpn4.png);
+  background-image: url(https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/rtfpn4.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 844px 378px;

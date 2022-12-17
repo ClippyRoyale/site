@@ -1000,8 +1000,8 @@ File.prototype.new = function(){
         assets:"assets.json",
         podiumLoop: false,
         resource:[
-            { id: "map", src: "https://raw.githubusercontent.com/mroyale/assets/master/img/game/smb_map_new.png" },
-            { id: "obj", src: "https://raw.githubusercontent.com/mroyale/assets/master/img/game/smb_obj.png" }
+            { id: "map", src: "https://raw.githubusercontent.com/mroyale/assets/legacy/img/game/smb_map_new.png" },
+            { id: "obj", src: "https://raw.githubusercontent.com/mroyale/assets/legacy/img/game/smb_obj.png" }
         ],
         world:[{
             id:0,
@@ -1088,7 +1088,7 @@ function _0x1ad34e() {
     this.hide();
 }
 _0x1ad34e.prototype.show = function(_0x2db366) {
-    this.element.innerHTML = "<img src='https://raw.githubusercontent.com/mroyale/assets/master/img/home/warn.png' class='warn-ico'/> " + _0x2db366;
+    this.element.innerHTML = "<img src='https://raw.githubusercontent.com/mroyale/assets/legacy/img/home/warn.png' class='warn-ico'/> " + _0x2db366;
     console.warn("##WARN## " + _0x2db366);
     this.timeout && clearTimeout(this.timeout);
     var _0x5db31f = this.element;
