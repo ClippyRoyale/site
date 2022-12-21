@@ -84,10 +84,14 @@ BeetleObject.prototype.step = function () {
         0x0 > this.pos.y && this.destroy();
     }
 };
-BeetleObject.prototype.control = function () {
-    this.state === BeetleObject.STATE.RUN && (this.grounded && !this.checkGround() && (this.dir = !this.dir), this.moveSpeed = this.dir ? -KoopaObject.MOVE_SPEED_MAX : KoopaObject.MOVE_SPEED_MAX);
-    this.state === BeetleObject.STATE.SPIN && (this.moveSpeed = this.dir ? -KoopaObject.SHELL_MOVE_SPEED_MAX : KoopaObject.SHELL_MOVE_SPEED_MAX);
-    if (this.state === BeetleObject.STATE.SHELL || this.state === BeetleObject.STATE.TRANSFORM) this.moveSpeed = 0x0;
+BeetleObject.prototype.control = function() {
+    if (this.state === BeetleObject.STATE.RUN) { 
+        this.moveSpeed = this.dir ? -KoopaObject.MOVE_SPEED_MAX : KoopaObject.MOVE_SPEED_MAX; 
+    } else if (this.state === BeetleObject.STATE.SPIN) { 
+        this.moveSpeed = this.dir ? -KoopaObject.SHELL_MOVE_SPEED_MAX : KoopaObject.SHELL_MOVE_SPEED_MAX; 
+    } else if (this.state === BeetleObject.STATE.SHELL || this.state === BeetleObject.STATE.TRANSFORM) { 
+        this.moveSpeed = 0; 
+    }
 };
 BeetleObject.prototype.physics = function () {
     if (this.grounded) {
