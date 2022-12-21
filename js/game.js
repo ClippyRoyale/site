@@ -4900,21 +4900,38 @@ GoombaObject.prototype.control = function () {
 GoombaObject.prototype.physics = function () {
     this.grounded && (this.fallSpeed = 0x0);
     this.fallSpeed = Math.max(this.fallSpeed - GoombaObject.FALL_SPEED_ACCEL, -GoombaObject.FALL_SPEED_MAX);
-    var _0x482f3b = vec2.add(this.pos, vec2.make(this.moveSpeed, 0x0)),
-        _0x443a52 = vec2.add(this.pos, vec2.make(this.moveSpeed, this.fallSpeed)),
-        _0x44dd07 = vec2.make(0x0 <= this.moveSpeed ? this.pos.x : this.pos.x + this.moveSpeed, 0x0 >= this.fallSpeed ? this.pos.y : this.pos.y + this.fallSpeed),
-        _0x39b88d = vec2.make(this.dim.y + Math.abs(this.moveSpeed), this.dim.y + Math.abs(this.fallSpeed)),
-        _0x44dd07 = this.game.world.getZone(this.level, this.zone).getTiles(_0x44dd07, _0x39b88d),
-        _0x39b88d = vec2.make(0x1, 0x1),
-        _0x5c888e = false;
+  
+    var movx = vec2.add(this.pos, vec2.make(this.moveSpeed, 0.));
+    var movy = vec2.add(this.pos, vec2.make(this.moveSpeed, this.fallSpeed));
+
+    var ext1 = vec2.make(this.moveSpeed>=0?this.pos.x:this.pos.x+this.moveSpeed, this.fallSpeed<=0?this.pos.y:this.pos.y+this.fallSpeed);
+    var ext2 = vec2.make(this.dim.y+Math.abs(this.moveSpeed), this.dim.y+Math.abs(this.fallSpeed));
+    var tiles = this.game.world.getZone(this.level, this.zone).getTiles(ext1, ext2);
+    var tdim = vec2.make(1., 1.);
+
+    var changeDir = false;
     this.grounded = false;
-    for (var _0x3c302a = 0x0; _0x3c302a < _0x44dd07.length; _0x3c302a++) {
-        var _0x1a430b = _0x44dd07[_0x3c302a];
-        _0x1a430b.definition.COLLIDE && squar.intersection(_0x1a430b.pos, _0x39b88d, _0x482f3b, this.dim) && (this.pos.x <= _0x482f3b.x && _0x482f3b.x + this.dim.x > _0x1a430b.pos.x ? (_0x482f3b.x = _0x1a430b.pos.x - this.dim.x, _0x443a52.x = _0x482f3b.x, this.moveSpeed = 0x0, _0x5c888e = true) : this.pos.x >= _0x482f3b.x && _0x482f3b.x < _0x1a430b.pos.x + _0x39b88d.x && (_0x482f3b.x = _0x1a430b.pos.x + _0x39b88d.x, _0x443a52.x = _0x482f3b.x, this.moveSpeed = 0x0, _0x5c888e = true));
+  
+    for(var i=0;i<tiles.length;i++) {
+        var tile = tiles[i];
+        if(!tile.definition.COLLIDE) { continue; }
+
+        var hity = squar.intersection(tile.pos, tdim, movy, this.dim);
+
+        if(hity) {
+            if(this.pos.y >= movy.y && movy.y < tile.pos.y + tdim.y) {
+                movy.y = tile.pos.y + tdim.y;
+                this.fallSpeed = 0;
+                this.grounded = true;
+            }
+            else if(this.pos.y <= movy.y && movy.y + this.dim.y > tile.pos.y) {
+                movy.y = tile.pos.y - this.dim.y;
+                this.fallSpeed = 0;
+            }
+        }
     }
-    for (_0x3c302a = 0x0; _0x3c302a < _0x44dd07.length; _0x3c302a++) _0x1a430b = _0x44dd07[_0x3c302a], _0x1a430b.definition.COLLIDE && squar.intersection(_0x1a430b.pos, _0x39b88d, _0x443a52, this.dim) && (this.pos.y >= _0x443a52.y && _0x443a52.y < _0x1a430b.pos.y + _0x39b88d.y ? (_0x443a52.y = _0x1a430b.pos.y + _0x39b88d.y, this.fallSpeed = 0x0, this.grounded = true) : this.pos.y <= _0x443a52.y && _0x443a52.y + this.dim.y > _0x1a430b.pos.y && (_0x443a52.y = _0x1a430b.pos.y - this.dim.y, this.fallSpeed = 0x0));
-    this.pos = vec2.make(_0x482f3b.x, _0x443a52.y);
-    _0x5c888e && (this.dir = !this.dir);
+    this.pos = vec2.make(movx.x, movy.y);
+    if(changeDir) { this.dir = !this.dir; }
 };
 GoombaObject.prototype.sound = GameObject.prototype.sound;
 GoombaObject.prototype.proximity = function () {
