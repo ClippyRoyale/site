@@ -390,20 +390,25 @@
 
   <!-- Hidden Chat -->
   <div id="hiddenChat" style='display:none;'>
-    <pre class="container-gameChat" style="width: 14rem; height: 5vh; transform: translateX(10%) translateY(90vh);">
-    <h2 style="font-size: 130%; margin-left: 7%; margin-top: 1px;">Show Chat</h2></pre>
+    <div class="container-gameChat">
+      <h2 style="margin-left: 1vw; margin-right: 1vw;>Show Chat</h2>
+    </div>
   </div>
 
   <!-- Game Chat -->
   <div id='gameChat' style='display:none;'>
-    <pre class="container-gameChat"><h2 style="text-align: center; margin-block-end: 0;">Chat</h2>
-    <span class="container-hideChat" id="hideChat">X</span>
-    <span class="container-chatTab"> <div id="lobbyBtn" style="border: 2px solid white;">Lobby</div>&nbsp; <div id="squadBtn">Squad</div> </span>
-    <hr style="width:95%; margin-top:-2%;">
-    <input class="container-chatInput" id="chat-input" maxlength="100">
-    <pre id="messagesGlobal" class="container-chatMessages"></pre>
-    <pre id="messagesSquad" class="container-chatMessages" style="display:none; margin-top: -13.5%"></pre>
-    </pre>
+    <div class="container-gameChat">
+      <h2 style="text-align: center">Chat</h2>
+      <span class="container-hideChat" id="hideChat">X</span>
+      <span class="container-chatTab">
+        <div id="lobbyBtn" style="border: 2px solid white;">Lobby</div>&nbsp; 
+        <div id="squadBtn">Squad</div>
+      </span>
+      <hr style="width:95%">
+      <input class="container-chatInput" id="chat-input" maxlength="100">
+      <pre id="messagesGlobal" class="container-chatMessages"></pre>
+      <pre id="messagesSquad" class="container-chatMessages" style="display:none"></pre>
+    </div>
   </div>
 
   <!-- Dev Console -->
