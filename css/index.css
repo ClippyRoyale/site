@@ -484,16 +484,18 @@ hr {
   white-space: nowrap;
 }
 
+#gameChat {
+  width: 25vw;
+}
+
 .container-gameChat {
   position: absolute;
   font-family: SmbWeb;
-  width: 50vh;
-  height: 45vh;
+  width: inherit;
   background-color: #00000080;
-  transform: translateX(5%) translateY(110%);
 
-  top: 0%;
-  left: 0%;
+  bottom: 0.5vw;
+  left: 0.5vw;
 
   background-image: none;
   border-radius: 10px;
@@ -501,6 +503,8 @@ hr {
   overflow-x: clip;
   overflow-y: hidden;
   color: #FFFFFF;
+  
+  font-size: 1vw;
 }
 
 .container-hideChat {
@@ -517,35 +521,29 @@ hr {
 }
 
 .container-chatTab {
-  display:inline-flex;
-  margin-left: -12%;
-  position: absolute;
-  transform: translateY(-50%);
+  display: inline-flex;
+  margin: 0 0.5vw;
 }
 
 .container-chatInput {
-  width: 98%;
-  transform: translateX(-12.5%) translateY(28vh);
-  height: 3vh;
+  width: 95%;
   background-color: rgba(0, 0, 0, 0.565);
   border-radius: 7px;
   font-family: SmbChat;
   color: rgb(255, 255, 255);
-  font-size: 18px;
+  font-size: 1vw;
+  margin: .5vw;
 }
 
 .container-chatMessages {
-  height: 27vh;
+  height: 10vw;
   font-family: 'SmbChat';
-  margin-top: -5vh;
-  margin-left: .5vh;
-  margin-right: .5vh;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
   overflow-x: auto;
   white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
   word-wrap: break-word;
+  font-size: 0.75vw;
 }
 
 .container-privLobby {
