@@ -491,14 +491,14 @@ td32.TILE_PROPERTIES = {
                 /* Touch */
                 case 0x00 : {
                     if(game.pid === pid) {
-						var data = Math.max(0, Math.min(1, parseInt(td.data) || 0));
-						switch (data) {
-							case 1 : { game.getPlayer().kill(); break; }
-							default : { game.getPlayer().damage(); break; }
-						}
+                        var data = Math.max(0, Math.min(1, parseInt(td.data) || 0));
+                        switch (data) {
+                            case 1 : { game.getPlayer().kill(); break; }
+                            default : { game.getPlayer().damage(); break; }
+                        }
                     }
-					break;
-				}
+                    break;
+                }
             }
         }
     },
