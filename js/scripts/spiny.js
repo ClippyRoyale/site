@@ -16,7 +16,7 @@ function SpinyObject(game, level, zone, pos, oid) {
 }
 SpinyObject.ASYNC = false;
 SpinyObject.ID = 0x17;
-SpinyObject.NAME = "SPINY SHELL";
+SpinyObject.NAME = "SPINY";
 SpinyObject.ANIMATION_RATE = 0x5;
 SpinyObject.VARIANT_OFFSET = 0x70;
 SpinyObject.ENABLE_FADE_TIME = 0xf;
