@@ -478,8 +478,13 @@ td32.TILE_PROPERTIES = {
                 /* Touch */
                 case 0x00: {
                     if (game.pid === pid) {
-                        game.getPlayer().damage();
+                        var data = Math.max(0, Math.min(1, parseInt(td.data) || 0));
+                        switch (data) {
+                            case 1 : { game.getPlayer().kill(); break; }
+                            default : { game.getPlayer().damage(); break; }
+                        }
                     }
+                    break;
                 }
             }
         }
@@ -635,7 +640,7 @@ td32.TILE_PROPERTIES = {
             }
         }
     },
-    /* Non-Solid Damage */
+    /* Air Damage */
     15: {
         COLLIDE: false,
         HIDDEN: false,
@@ -645,8 +650,13 @@ td32.TILE_PROPERTIES = {
                 /* Touch */
                 case 0x00: {
                     if (game.pid === pid) {
-                        game.getPlayer().damage();
+                        var data = Math.max(0, Math.min(1, parseInt(td.data) || 0));
+                        switch (data) {
+                            case 1 : { game.getPlayer().kill(); break; }
+                            default : { game.getPlayer().damage(); break; }
+                        }
                     }
+                    break;
                 }
             }
         }
