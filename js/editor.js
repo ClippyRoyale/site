@@ -6,7 +6,7 @@ var tileDefs = {
     1:  {'name': 'SOLID STANDARD'},
     2:  {'name': 'SOLID BUMPABLE'},
     3:  {'name': 'SOLID BREAKABLE NORMAL'},
-    4:  {'name': 'SOLID DAMAGE'},
+    4:  {'name': 'SOLID DAMAGE', 'extraDataName': 'Instant Death (0=off, 1=on)'},
     5:  {'name': 'SEMISOLID'},
     6:  {'name': 'SEMISOLID WEAK'},
     7:  {'name': 'WATER STANDARD'},
@@ -16,7 +16,7 @@ var tileDefs = {
     11: {'name': 'NOTE BLOCK'},
     12: {'name': 'ITEM NOTE BLOCK', 'extraDataName': 'Content', 'extraDataType': 'objId'},
     14: {'name': 'FLIP BLOCK', 'extraDataName': 'Target Data'},
-    15: {'name': 'AIR DAMAGE'},
+    15: {'name': 'AIR DAMAGE', 'extraDataName': 'Instant Death (0=off, 1=on)'},
     13: {'name': 'ICE TILE BLOCK', 'extraDataName': 'Target Tile Data'},
     16: {'name': 'ICE OBJECT BLOCK', 'extraDataName': 'Content', 'extraDataType': 'objId'},
     17: {'name': 'ITEM BLOCK STANDARD', 'extraDataName': 'Content', 'extraDataType': 'objId'},
@@ -57,7 +57,7 @@ var objDefs = {
     19:  {'name': 'KOOPA TROOPA RED', 'description': "- [fly] Should be set to 0 or 1. 1 is flying.\n- [variant] Should be set to 0 or 1. 0 is the light one, 1 is the dark one.", 'paramDefs': [{'name': 'fly','type':'bool'}, {'name': 'variant','type':'bool'}]},
     21:  {'name': 'FLYING FISH', 'description': '- [delay] Positive integer in seconds for how the fish should wait before jumping again.\n- [float] Value for how much force the fish should jump with.', 'paramDefs': [{'name': 'delay','type':'int'}, {'name': 'impulse','type':'float'}]},
     22:  {'name': 'PIRANHA PLANT', 'description': '- [color] Should be set to 0 or 1. 0 is the light one, 1 is the dark one.\n- [direction] Indicates which way to go. 0 is normal, 1 is upside down.\n- [static] Should be 0 or 1. 0 is normal, 1 is static.\n- [noOffset] By default Piranha Plants are offset by half a tile to fit in two tiled pipes. Use 1 to stop that from happening.', 'paramDefs': [{'name': 'variant','type':'bool'}, {'name': 'direction','type':'bool'}, {'name': 'static','type':'bool'}, {'name': 'noOffset','type':'bool'}]},
-    23:  {'name': 'SPINY SHELL', 'description': '- No params.'}, // New
+    23:  {'name': 'SPINY', 'description': '- No params.'}, // New
     24:  {'name': 'BUZZY BEETLE', 'description': '- No params.'},
     25:  {'name': 'BOWSER', 'description': '- [attackType] Should be set to 0, 1 or 2. 0 is only fire breathing, 1 is only hammer throwing, 2 is both.\n- [fireDirection] Should be set to 0 or 1. 0 is left, 1 is right.', 'paramDefs': [{'name': 'attackType','type':'int'}, {'name': 'fireDirection','type':'int'}]},
     33:  {'name': 'FIRE BAR', 'description': '- [phase] Should be only 0 or 1, only offsets it a bit.\n - [length] Positive integer for how many fire balls should spawn\n- [rate] Rate of spinning. Default is 23. Lower is faster, negative is to go in reverse.', 'paramDefs': [{'name': 'phase','type':'bool'}, {'name': 'length','type':'int'}, {'name': 'rate','type':'int'}]},
