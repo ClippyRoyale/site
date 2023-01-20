@@ -9781,6 +9781,8 @@ Game.prototype.doStep = function () {
                     this.gameOver = false;
                     this.gameOverTimer = 0x0;
                     this.lives = -1; // Activate spectate mode
+                    
+                    document.getElementById('return').style.display = "block";
 
                     this.doSpawn();
                     this.getPlayer().spectate();
